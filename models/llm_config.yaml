@@ -1,0 +1,56 @@
+# ============================================================
+#  LLM Provider Configuration
+#  ============================================================
+#  This is the ONLY file you need to edit when:
+#    - Changing a model name
+#    - Rotating an API key
+#    - Adding a new provider
+#    - Changing an API endpoint
+#
+#  API keys can be set here OR as environment variables.
+#  Environment variables always take priority over values here.
+#
+#  Env var names follow the pattern: <PROVIDER>_API_KEY
+#  e.g.  OPENAI_API_KEY, GEMINI_API_KEY, ANTHROPIC_API_KEY
+# ============================================================
+
+# ── Which provider to use by default ──────────────────────
+# Choices: ollama | openai | gemini | anthropic
+default_provider: ollama
+
+# ── Provider-specific settings ────────────────────────────
+providers:
+
+  ollama:
+    # No API key needed — Ollama runs locally
+    api_url: "http://localhost:11434/api/generate"
+    default_model: "gemma3:1b"
+    timeout: 180
+    # Other models you can drop in:
+    #   llama3:8b | llama3:70b | mistral | phi3 | gemma2
+
+  openai:
+    api_key: ""           # Leave empty → reads OPENAI_API_KEY env var
+    default_model: "gpt-4o-mini"
+    timeout: 60
+    # Other models you can drop in:
+    #   gpt-4o | gpt-4-turbo | gpt-3.5-turbo | o1-mini
+
+  gemini:
+    api_key: ""           # Leave empty → reads GEMINI_API_KEY env var
+    default_model: "gemini-2.0-flash"
+    timeout: 60
+    # Other models you can drop in:
+    #   gemini-2.0-pro | gemini-1.5-pro | gemini-1.5-flash
+
+  anthropic:
+    api_key: ""           # Leave empty → reads ANTHROPIC_API_KEY env var
+    default_model: "claude-haiku-4-5-20251001"
+    timeout: 60
+    # Other models you can drop in:
+    #   claude-opus-4-6 | claude-sonnet-4-6 | claude-haiku-4-5-20251001
+
+# ── LLM generation parameters ─────────────────────────────
+generation:
+  temperature: 0.7
+  max_tokens: 1024

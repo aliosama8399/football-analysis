@@ -1,0 +1,125 @@
+Shape: (5330, 54)
+
+=== ALL COLUMNS ===
+0: Div | object | nulls=1752
+1: Date | object | nulls=0
+2: Time | object | nulls=0
+3: HomeTeam | object | nulls=0
+4: AwayTeam | object | nulls=0
+5: FTHG | int64 | nulls=0
+6: FTAG | int64 | nulls=0
+7: FTR | object | nulls=0
+8: HTHG | float64 | nulls=1
+9: HTAG | float64 | nulls=1
+10: HTR | object | nulls=1
+11: HS | float64 | nulls=1
+12: AS | float64 | nulls=1
+13: HST | float64 | nulls=1
+14: AST | float64 | nulls=1
+15: HF | float64 | nulls=1
+16: AF | float64 | nulls=1
+17: HC | float64 | nulls=1
+18: AC | float64 | nulls=1
+19: HY | float64 | nulls=1
+20: AY | float64 | nulls=1
+21: HR | float64 | nulls=1
+22: AR | float64 | nulls=1
+23: League | object | nulls=0
+24: Season | int64 | nulls=0
+25: Result | object | nulls=0
+26: TotalGoals | int64 | nulls=0
+27: GoalDiff | int64 | nulls=0
+28: Over2.5 | int64 | nulls=0
+29: BTTS | int64 | nulls=0
+30: HomeForm_5 | float64 | nulls=0
+31: HomeGF_5 | float64 | nulls=0
+32: HomeGA_5 | float64 | nulls=0
+33: Home_xG_5 | float64 | nulls=0
+34: Home_xGA_5 | float64 | nulls=0
+35: AwayForm_5 | float64 | nulls=0
+36: AwayGF_5 | float64 | nulls=0
+37: AwayGA_5 | float64 | nulls=0
+38: Away_xG_5 | float64 | nulls=0
+39: Away_xGA_5 | float64 | nulls=0
+40: H2H_Matches | int64 | nulls=0
+41: H2H_HomeWins | int64 | nulls=0
+42: H2H_AwayWins | int64 | nulls=0
+43: H2H_Draws | int64 | nulls=0
+44: H2H_HomeGoals | float64 | nulls=0
+45: H2H_AwayGoals | float64 | nulls=0
+46: Ref_AvgYellows | float64 | nulls=0
+47: Ref_AvgReds | float64 | nulls=0
+48: Ref_Strictness | float64 | nulls=0
+49: Result_Num | int64 | nulls=0
+50: Over1.5 | int64 | nulls=0
+51: Over3.5 | int64 | nulls=0
+52: HomeCleanSheet | int64 | nulls=0
+53: AwayCleanSheet | int64 | nulls=0
+
+=== TARGET ===
+FTR
+H    2326
+A    1661
+D    1343
+Name: count, dtype: int64
+FTR
+H    0.436
+A    0.312
+D    0.252
+Name: proportion, dtype: float64
+
+=== LEAGUES ===
+League
+Premier_League    1140
+La_Liga           1140
+Serie_A           1140
+Ligue_1            992
+Bundesliga         918
+Name: count, dtype: int64
+
+=== NUMERIC (45) ===
+FTHG
+FTAG
+HTHG
+HTAG
+HS
+AS
+HST
+AST
+HF
+AF
+HC
+AC
+HY
+AY
+HR
+AR
+Season
+TotalGoals
+GoalDiff
+Over2.5
+BTTS
+HomeForm_5
+HomeGF_5
+HomeGA_5
+Home_xG_5
+Home_xGA_5
+AwayForm_5
+AwayGF_5
+AwayGA_5
+Away_xG_5
+Away_xGA_5
+H2H_Matches
+H2H_HomeWins
+H2H_AwayWins
+H2H_Draws
+H2H_HomeGoals
+H2H_AwayGoals
+Ref_AvgYellows
+Ref_AvgReds
+Ref_Strictness
+Result_Num
+Over1.5
+Over3.5
+HomeCleanSheet
+AwayCleanSheet

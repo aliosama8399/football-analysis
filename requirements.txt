@@ -1,0 +1,33 @@
+# Football Analysis & Prediction Project
+# Requirements for data collection and preprocessing
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# HTTP and web scraping
+requests>=2.31.0
+aiohttp>=3.9.0
+beautifulsoup4>=4.12.0
+
+# Machine Learning
+scikit-learn>=1.3.0
+xgboost>=2.0.0
+lightgbm>=4.0.0
+joblib>=1.3.0
+
+# Understat data collection
+# understat>=0.1.0  # Alternative async package
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# RAG System (for later phases)
+# langchain>=0.1.0
+# chromadb>=0.4.0
+# sentence-transformers>=2.2.0
+
+# Utilities
+python-dotenv>=1.0.0
+tqdm>=4.65.0
