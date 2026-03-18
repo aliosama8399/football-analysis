@@ -2,7 +2,7 @@
 
 ![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.x-EE4C2C.svg?logo=pytorch)
-![Unsloth](https://img.shields.io/badge/Unsloth-LoRA-FF69B4.svg)
+![LLaMA Factory](https://img.shields.io)
 ![GNN](https://img.shields.io/badge/Graph_Neural_Networks-PyG-blueviolet)
 
 This repository contains a comprehensive **machine learning and AI pipeline** for predicting football match outcomes across Europe's top leagues (Premier League, La Liga, Serie A, Bundesliga, Ligue 1, and the UEFA Champions League) and generating professional, natural language **tactical analysis reports**. 
