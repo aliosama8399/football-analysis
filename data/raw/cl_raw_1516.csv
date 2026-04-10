@@ -1,0 +1,124 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,Referee,Home_xG,Away_xG,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR,Season,League,Div
+2015-09-15,Manchester City,Juventus,1,2,A,Damir Skomina,0.0,0.0,,,4.25,5.62,13.0,13.12,,,1.25,1.75,,,1516,Champions_League,CL
+2015-09-15,Benfica,FC Astana,2,0,H,Tasos Sidiropoulos,0.0,0.0,,,5.3,2.08,13.7,6.42,,,2.9,0.92,,,1516,Champions_League,CL
+2015-09-15,PSV,Manchester Utd,2,1,H,Nicola Rizzoli,0.0,0.0,,,3.62,4.12,12.38,9.5,,,2.75,1.38,,,1516,Champions_League,CL
+2015-09-15,Sevilla,Gladbach,3,0,H,Pavel Královec,0.0,0.0,,,4.0,5.17,9.33,12.67,,,1.17,1.83,,,1516,Champions_League,CL
+2015-09-15,Real Madrid,Shakhtar Donetsk,4,0,H,Ivan Bebek,0.0,0.0,,,7.23,2.6,10.92,6.8,,,1.85,1.7,,,1516,Champions_League,CL
+2015-09-15,Wolfsburg,CSKA Moscow,1,0,H,Svein Oddvar Moen,0.0,0.0,,,4.6,1.9,10.4,5.7,,,1.8,1.2,,,1516,Champions_League,CL
+2015-09-15,Paris Saint-Germain,Malmö,2,0,H,Sergey Karasev,0.0,0.0,,,5.2,1.5,11.5,5.75,,,2.2,1.17,,,1516,Champions_League,CL
+2015-09-15,Galatasaray,Atlético Madrid,0,2,A,Szymon Marciniak,0.0,0.0,,,4.5,5.92,11.83,12.0,,,2.0,1.77,,,1516,Champions_League,CL
+2015-09-16,Chelsea,Maccabi Tel Aviv FC,4,0,H,Felix Zwayer,0.0,0.0,,,5.62,1.0,14.12,6.5,,,1.88,1.17,,,1516,Champions_League,CL
+2015-09-16,Gent,Lyon,1,1,D,William Collum,0.0,0.0,,,4.75,5.0,15.75,16.5,,,2.25,2.5,,,1516,Champions_League,CL
+2015-09-16,Leverkusen,BATE Borisov,4,1,H,Danny Makkelie,0.0,0.0,,,5.25,1.33,10.75,6.92,,,1.5,1.5,,,1516,Champions_League,CL
+2015-09-16,Dinamo Zagreb,Arsenal,2,1,H,Ovidiu Hațegan,0.0,0.0,,,1.25,5.25,5.75,10.5,,,1.25,2.12,,,1516,Champions_League,CL
+2015-09-16,Roma,Barcelona,1,1,D,Björn Kuipers,0.0,0.0,,,5.38,6.4,11.25,11.2,,,1.25,2.3,,,1516,Champions_League,CL
+2015-09-16,Valencia,Zenit,2,3,A,Craig Thomson,0.0,0.0,,,2.5,4.5,10.88,15.62,,,2.38,3.38,,,1516,Champions_League,CL
+2015-09-16,Dynamo Kyiv,Porto,2,2,D,Felix Brych,0.0,0.0,,,4.5,4.67,16.5,14.67,,,2.12,2.17,,,1516,Champions_League,CL
+2015-09-16,Olympiacos,Bayern Munich,0,3,A,Carlos Velasco,0.0,0.0,,,4.0,8.58,11.0,11.17,,,2.0,1.67,,,1516,Champions_League,CL
+2015-09-29,Arsenal,Olympiacos,2,3,A,Bas Nijhuis,0.0,0.0,,,5.25,4.0,10.5,11.0,,,2.12,2.0,,,1516,Champions_League,CL
+2015-09-29,Porto,Chelsea,2,1,H,Antonio Matéu Lahoz,0.0,0.0,,,4.67,5.62,14.67,14.12,,,2.17,1.88,,,1516,Champions_League,CL
+2015-09-29,Bayern Munich,Dinamo Zagreb,5,0,H,Aliaksei Kulbakou,0.0,0.0,,,8.58,1.25,11.17,5.75,,,1.67,1.25,,,1516,Champions_League,CL
+2015-09-29,Barcelona,Leverkusen,2,1,H,Martin Atkinson,0.0,0.0,,,6.4,5.25,11.2,10.75,,,2.3,1.5,,,1516,Champions_League,CL
+2015-09-29,Lyon,Valencia,0,1,A,Milorad Mažić,0.0,0.0,,,5.0,2.5,16.5,10.88,,,2.5,2.38,,,1516,Champions_League,CL
+2015-09-29,BATE Borisov,Roma,3,2,H,Mark Clattenburg,0.0,0.0,,,1.33,5.38,6.92,11.25,,,1.5,1.25,,,1516,Champions_League,CL
+2015-09-29,Zenit,Gent,2,1,H,Matej Jug,0.0,0.0,,,4.5,4.75,15.62,15.75,,,3.38,2.25,,,1516,Champions_League,CL
+2015-09-29,Maccabi Tel Aviv FC,Dynamo Kyiv,0,2,A,David Fernández,0.0,0.0,,,1.0,4.5,6.5,16.5,,,1.17,2.12,,,1516,Champions_League,CL
+2015-09-30,Manchester Utd,Wolfsburg,2,1,H,Viktor Kassai,0.0,0.0,,,4.12,4.6,9.5,10.4,,,1.38,1.8,,,1516,Champions_League,CL
+2015-09-30,Gladbach,Manchester City,1,2,A,Clément Turpin,0.0,0.0,,,5.17,4.25,12.67,13.0,,,1.83,1.25,,,1516,Champions_League,CL
+2015-09-30,Malmö,Real Madrid,0,2,A,Cüneyt Çakιr,0.0,0.0,,,1.5,7.23,5.75,10.92,,,1.17,1.85,,,1516,Champions_League,CL
+2015-09-30,Juventus,Sevilla,2,0,H,Jonas Eriksson,0.0,0.0,,,5.62,4.0,13.12,9.33,,,1.75,1.17,,,1516,Champions_League,CL
+2015-09-30,Atlético Madrid,Benfica,1,2,A,Gianluca Rocchi,0.0,0.0,,,5.92,5.3,12.0,13.7,,,1.77,2.9,,,1516,Champions_League,CL
+2015-09-30,Shakhtar Donetsk,Paris Saint-Germain,0,3,A,Deniz Aytekin,0.0,0.0,,,2.6,5.2,6.8,11.5,,,1.7,2.2,,,1516,Champions_League,CL
+2015-09-30,CSKA Moscow,PSV,3,2,H,Ruddy Buquet,0.0,0.0,,,1.9,3.62,5.7,12.38,,,1.2,2.75,,,1516,Champions_League,CL
+2015-09-30,FC Astana,Galatasaray,2,2,D,Martin Strömbergsson,0.0,0.0,,,2.08,4.5,6.42,11.83,,,0.92,2.0,,,1516,Champions_League,CL
+2015-10-20,Porto,Maccabi Tel Aviv FC,2,0,H,Clément Turpin,0.0,0.0,,,4.67,1.0,14.67,6.5,,,2.17,1.17,,,1516,Champions_League,CL
+2015-10-20,Arsenal,Bayern Munich,2,0,H,Cüneyt Çakιr,0.0,0.0,,,5.25,8.58,10.5,11.17,,,2.12,1.67,,,1516,Champions_League,CL
+2015-10-20,Leverkusen,Roma,4,4,D,Viktor Kassai,0.0,0.0,,,5.25,5.38,10.75,11.25,,,1.5,1.25,,,1516,Champions_League,CL
+2015-10-20,Valencia,Gent,2,1,H,Felix Zwayer,0.0,0.0,,,2.5,4.75,10.88,15.75,,,2.38,2.25,,,1516,Champions_League,CL
+2015-10-20,Dinamo Zagreb,Olympiacos,0,1,A,Paolo Tagliavento,0.0,0.0,,,1.25,4.0,5.75,11.0,,,1.25,2.0,,,1516,Champions_League,CL
+2015-10-20,BATE Borisov,Barcelona,0,2,A,Jorge de Sousa,0.0,0.0,,,1.33,6.4,6.92,11.2,,,1.5,2.3,,,1516,Champions_League,CL
+2015-10-20,Dynamo Kyiv,Chelsea,0,0,D,Damir Skomina,0.0,0.0,,,4.5,5.62,16.5,14.12,,,2.12,1.88,,,1516,Champions_League,CL
+2015-10-20,Zenit,Lyon,3,1,H,Martin Atkinson,0.0,0.0,,,4.5,5.0,15.62,16.5,,,3.38,2.5,,,1516,Champions_League,CL
+2015-10-21,Manchester City,Sevilla,2,1,H,Bas Nijhuis,0.0,0.0,,,4.25,4.0,13.0,9.33,,,1.25,1.17,,,1516,Champions_League,CL
+2015-10-21,Malmö,Shakhtar Donetsk,1,0,H,Tasos Sidiropoulos,0.0,0.0,,,1.5,2.6,5.75,6.8,,,1.17,1.7,,,1516,Champions_League,CL
+2015-10-21,Wolfsburg,PSV,2,0,H,Alberto Undiano,0.0,0.0,,,4.6,3.62,10.4,12.38,,,1.8,2.75,,,1516,Champions_League,CL
+2015-10-21,Atlético Madrid,FC Astana,4,0,H,Aliaksei Kulbakou,0.0,0.0,,,5.92,2.08,12.0,6.42,,,1.77,0.92,,,1516,Champions_League,CL
+2015-10-21,Paris Saint-Germain,Real Madrid,0,0,D,Nicola Rizzoli,0.0,0.0,,,5.2,7.23,11.5,10.92,,,2.2,1.85,,,1516,Champions_League,CL
+2015-10-21,Juventus,Gladbach,0,0,D,Craig Thomson,0.0,0.0,,,5.62,5.17,13.12,12.67,,,1.75,1.83,,,1516,Champions_League,CL
+2015-10-21,Galatasaray,Benfica,2,1,H,William Collum,0.0,0.0,,,4.5,5.3,11.83,13.7,,,2.0,2.9,,,1516,Champions_League,CL
+2015-10-21,CSKA Moscow,Manchester Utd,1,1,D,Carlos Velasco,0.0,0.0,,,1.9,4.12,5.7,9.5,,,1.2,1.38,,,1516,Champions_League,CL
+2015-11-03,Manchester Utd,CSKA Moscow,1,0,H,Szymon Marciniak,0.0,0.0,,,4.12,1.9,9.5,5.7,,,1.38,1.2,,,1516,Champions_League,CL
+2015-11-03,Benfica,Galatasaray,2,1,H,Milorad Mažić,0.0,0.0,,,5.3,4.5,13.7,11.83,,,2.9,2.0,,,1516,Champions_League,CL
+2015-11-03,Gladbach,Juventus,1,1,D,Björn Kuipers,0.0,0.0,,,5.17,5.62,12.67,13.12,,,1.83,1.75,,,1516,Champions_League,CL
+2015-11-03,Sevilla,Manchester City,1,3,A,Svein Oddvar Moen,0.0,0.0,,,4.0,4.25,9.33,13.0,,,1.17,1.25,,,1516,Champions_League,CL
+2015-11-03,Real Madrid,Paris Saint-Germain,1,0,H,Mark Clattenburg,0.0,0.0,,,7.23,5.2,10.92,11.5,,,1.85,2.2,,,1516,Champions_League,CL
+2015-11-03,PSV,Wolfsburg,2,0,H,Jonas Eriksson,0.0,0.0,,,3.62,4.6,12.38,10.4,,,2.75,1.8,,,1516,Champions_League,CL
+2015-11-03,FC Astana,Atlético Madrid,0,0,D,Anthony Taylor,0.0,0.0,,,2.08,5.92,6.42,12.0,,,0.92,1.77,,,1516,Champions_League,CL
+2015-11-03,Shakhtar Donetsk,Malmö,4,0,H,Ovidiu Hațegan,0.0,0.0,,,2.6,1.5,6.8,5.75,,,1.7,1.17,,,1516,Champions_League,CL
+2015-11-04,Chelsea,Dynamo Kyiv,2,1,H,Pavel Královec,0.0,0.0,,,5.62,4.5,14.12,16.5,,,1.88,2.12,,,1516,Champions_League,CL
+2015-11-04,Bayern Munich,Arsenal,5,1,H,Gianluca Rocchi,0.0,0.0,,,8.58,5.25,11.17,10.5,,,1.67,2.12,,,1516,Champions_League,CL
+2015-11-04,Gent,Valencia,1,0,H,Daniele Orsato,0.0,0.0,,,4.75,2.5,15.75,10.88,,,2.25,2.38,,,1516,Champions_League,CL
+2015-11-04,Barcelona,BATE Borisov,3,0,H,István Vad II,0.0,0.0,,,6.4,1.33,11.2,6.92,,,2.3,1.5,,,1516,Champions_League,CL
+2015-11-04,Roma,Leverkusen,3,2,H,Sergey Karasev,0.0,0.0,,,5.38,5.25,11.25,10.75,,,1.25,1.5,,,1516,Champions_League,CL
+2015-11-04,Lyon,Zenit,0,2,A,Felix Brych,0.0,0.0,,,5.0,4.5,16.5,15.62,,,2.5,3.38,,,1516,Champions_League,CL
+2015-11-04,Olympiacos,Dinamo Zagreb,2,1,H,Antonio Matéu Lahoz,0.0,0.0,,,4.0,1.25,11.0,5.75,,,2.0,1.25,,,1516,Champions_League,CL
+2015-11-04,Maccabi Tel Aviv FC,Porto,1,3,A,Tasos Sidiropoulos,0.0,0.0,,,1.0,4.67,6.5,14.67,,,1.17,2.17,,,1516,Champions_League,CL
+2015-11-24,Arsenal,Dinamo Zagreb,3,0,H,Viktor Kassai,0.0,0.0,,,5.25,1.25,10.5,5.75,,,2.12,1.25,,,1516,Champions_League,CL
+2015-11-24,Porto,Dynamo Kyiv,0,2,A,Carlos Velasco,0.0,0.0,,,4.67,4.5,14.67,16.5,,,2.17,2.12,,,1516,Champions_League,CL
+2015-11-24,BATE Borisov,Leverkusen,1,1,D,Clément Turpin,0.0,0.0,,,1.33,5.25,6.92,10.75,,,1.5,1.5,,,1516,Champions_League,CL
+2015-11-24,Zenit,Valencia,2,0,H,Svein Oddvar Moen,0.0,0.0,,,4.5,2.5,15.62,10.88,,,3.38,2.38,,,1516,Champions_League,CL
+2015-11-24,Bayern Munich,Olympiacos,4,0,H,Jonas Eriksson,0.0,0.0,,,8.58,4.0,11.17,11.0,,,1.67,2.0,,,1516,Champions_League,CL
+2015-11-24,Barcelona,Roma,6,1,H,Cüneyt Çakιr,0.0,0.0,,,6.4,5.38,11.2,11.25,,,2.3,1.25,,,1516,Champions_League,CL
+2015-11-24,Lyon,Gent,1,2,A,Sergey Karasev,0.0,0.0,,,5.0,4.75,16.5,15.75,,,2.5,2.25,,,1516,Champions_League,CL
+2015-11-24,Maccabi Tel Aviv FC,Chelsea,0,4,A,Alberto Undiano,0.0,0.0,,,1.0,5.62,6.5,14.12,,,1.17,1.88,,,1516,Champions_League,CL
+2015-11-25,Manchester Utd,PSV,0,0,D,Pavel Královec,0.0,0.0,,,4.12,3.62,9.5,12.38,,,1.38,2.75,,,1516,Champions_League,CL
+2015-11-25,CSKA Moscow,Wolfsburg,0,2,A,Gianluca Rocchi,0.0,0.0,,,1.9,4.6,5.7,10.4,,,1.2,1.8,,,1516,Champions_League,CL
+2015-11-25,Gladbach,Sevilla,4,2,H,Damir Skomina,0.0,0.0,,,5.17,4.0,12.67,9.33,,,1.83,1.17,,,1516,Champions_League,CL
+2015-11-25,Atlético Madrid,Galatasaray,2,0,H,Nicola Rizzoli,0.0,0.0,,,5.92,4.5,12.0,11.83,,,1.77,2.0,,,1516,Champions_League,CL
+2015-11-25,Malmö,Paris Saint-Germain,0,5,A,William Collum,0.0,0.0,,,1.5,5.2,5.75,11.5,,,1.17,2.2,,,1516,Champions_League,CL
+2015-11-25,Juventus,Manchester City,1,0,H,Felix Brych,0.0,0.0,,,5.62,4.25,13.12,13.0,,,1.75,1.25,,,1516,Champions_League,CL
+2015-11-25,FC Astana,Benfica,2,2,D,Ruddy Buquet,0.0,0.0,,,2.08,5.3,6.42,13.7,,,0.92,2.9,,,1516,Champions_League,CL
+2015-11-25,Shakhtar Donetsk,Real Madrid,3,4,A,Bas Nijhuis,0.0,0.0,,,2.6,7.23,6.8,10.92,,,1.7,1.85,,,1516,Champions_League,CL
+2015-12-08,Benfica,Atlético Madrid,1,2,A,Ovidiu Hațegan,0.0,0.0,,,5.3,5.92,13.7,12.0,,,2.9,1.77,,,1516,Champions_League,CL
+2015-12-08,Manchester City,Gladbach,4,2,H,Danny Makkelie,0.0,0.0,,,4.25,5.17,13.0,12.67,,,1.25,1.83,,,1516,Champions_League,CL
+2015-12-08,Sevilla,Juventus,1,0,H,Szymon Marciniak,0.0,0.0,,,4.0,5.62,9.33,13.12,,,1.17,1.75,,,1516,Champions_League,CL
+2015-12-08,Real Madrid,Malmö,8,0,H,Daniele Orsato,0.0,0.0,,,7.23,1.5,10.92,5.75,,,1.85,1.17,,,1516,Champions_League,CL
+2015-12-08,PSV,CSKA Moscow,2,1,H,David Fernández,0.0,0.0,,,3.62,1.9,12.38,5.7,,,2.75,1.2,,,1516,Champions_League,CL
+2015-12-08,Wolfsburg,Manchester Utd,3,2,H,Milorad Mažić,0.0,0.0,,,4.6,4.12,10.4,9.5,,,1.8,1.38,,,1516,Champions_League,CL
+2015-12-08,Paris Saint-Germain,Shakhtar Donetsk,2,0,H,Anthony Taylor,0.0,0.0,,,5.2,2.6,11.5,6.8,,,2.2,1.7,,,1516,Champions_League,CL
+2015-12-08,Galatasaray,FC Astana,1,1,D,Craig Thomson,0.0,0.0,,,4.5,2.08,11.83,6.42,,,2.0,0.92,,,1516,Champions_League,CL
+2015-12-09,Chelsea,Porto,2,0,H,Cüneyt Çakιr,0.0,0.0,,,5.62,4.67,14.12,14.67,,,1.88,2.17,,,1516,Champions_League,CL
+2015-12-09,Valencia,Lyon,0,2,A,Matej Jug,0.0,0.0,,,2.5,5.0,10.88,16.5,,,2.38,2.5,,,1516,Champions_League,CL
+2015-12-09,Roma,BATE Borisov,0,0,D,Martin Atkinson,0.0,0.0,,,5.38,1.33,11.25,6.92,,,1.25,1.5,,,1516,Champions_League,CL
+2015-12-09,Leverkusen,Barcelona,1,1,D,Mark Clattenburg,0.0,0.0,,,5.25,6.4,10.75,11.2,,,1.5,2.3,,,1516,Champions_League,CL
+2015-12-09,Gent,Zenit,2,1,H,Jorge de Sousa,0.0,0.0,,,4.75,4.5,15.75,15.62,,,2.25,3.38,,,1516,Champions_League,CL
+2015-12-09,Dinamo Zagreb,Bayern Munich,0,2,A,Martin Strömbergsson,0.0,0.0,,,1.25,8.58,5.75,11.17,,,1.25,1.67,,,1516,Champions_League,CL
+2015-12-09,Olympiacos,Arsenal,0,3,A,Nicola Rizzoli,0.0,0.0,,,4.0,5.25,11.0,10.5,,,2.0,2.12,,,1516,Champions_League,CL
+2015-12-09,Dynamo Kyiv,Maccabi Tel Aviv FC,1,0,H,Björn Kuipers,0.0,0.0,,,4.5,1.0,16.5,6.5,,,2.12,1.17,,,1516,Champions_League,CL
+2016-02-16,Benfica,Zenit,1,0,H,Gianluca Rocchi,0.0,0.0,,,5.3,4.5,13.7,15.62,,,2.9,3.38,,,1516,Champions_League,CL
+2016-02-16,Paris Saint-Germain,Chelsea,2,1,H,Carlos Velasco,0.0,0.0,,,5.2,5.62,11.5,14.12,,,2.2,1.88,,,1516,Champions_League,CL
+2016-02-17,Gent,Wolfsburg,2,3,A,Svein Oddvar Moen,0.0,0.0,,,4.75,4.6,15.75,10.4,,,2.25,1.8,,,1516,Champions_League,CL
+2016-02-17,Roma,Real Madrid,0,2,A,Pavel Královec,0.0,0.0,,,5.38,7.23,11.25,10.92,,,1.25,1.85,,,1516,Champions_League,CL
+2016-02-23,Arsenal,Barcelona,0,2,A,Cüneyt Çakιr,0.0,0.0,,,5.25,6.4,10.5,11.2,,,2.12,2.3,,,1516,Champions_League,CL
+2016-02-23,Juventus,Bayern Munich,2,2,D,Martin Atkinson,0.0,0.0,,,5.62,8.58,13.12,11.17,,,1.75,1.67,,,1516,Champions_League,CL
+2016-02-24,PSV,Atlético Madrid,0,0,D,Daniele Orsato,0.0,0.0,,,3.62,5.92,12.38,12.0,,,2.75,1.77,,,1516,Champions_League,CL
+2016-02-24,Dynamo Kyiv,Manchester City,1,3,A,Antonio Matéu Lahoz,0.0,0.0,,,4.5,4.25,16.5,13.0,,,2.12,1.25,,,1516,Champions_League,CL
+2016-03-08,Real Madrid,Roma,2,0,H,Szymon Marciniak,0.0,0.0,,,7.23,5.38,10.92,11.25,,,1.85,1.25,,,1516,Champions_League,CL
+2016-03-08,Wolfsburg,Gent,1,0,H,Damir Skomina,0.0,0.0,,,4.6,4.75,10.4,15.75,,,1.8,2.25,,,1516,Champions_League,CL
+2016-03-09,Chelsea,Paris Saint-Germain,1,2,A,Felix Brych,0.0,0.0,,,5.62,5.2,14.12,11.5,,,1.88,2.2,,,1516,Champions_League,CL
+2016-03-09,Zenit,Benfica,1,2,A,Viktor Kassai,0.0,0.0,,,4.5,5.3,15.62,13.7,,,3.38,2.9,,,1516,Champions_League,CL
+2016-03-15,Manchester City,Dynamo Kyiv,0,0,D,Ovidiu Hațegan,0.0,0.0,,,4.25,4.5,13.0,16.5,,,1.25,2.12,,,1516,Champions_League,CL
+2016-03-16,Bayern Munich,Juventus,4,2,H,Jonas Eriksson,0.0,0.0,,,8.58,5.62,11.17,13.12,,,1.67,1.75,,,1516,Champions_League,CL
+2016-03-16,Barcelona,Arsenal,3,1,H,Sergey Karasev,0.0,0.0,,,6.4,5.25,11.2,10.5,,,2.3,2.12,,,1516,Champions_League,CL
+2016-04-05,Barcelona,Atlético Madrid,2,1,H,Felix Brych,0.0,0.0,,,6.4,5.92,11.2,12.0,,,2.3,1.77,,,1516,Champions_League,CL
+2016-04-05,Bayern Munich,Benfica,1,0,H,Szymon Marciniak,0.0,0.0,,,8.58,5.3,11.17,13.7,,,1.67,2.9,,,1516,Champions_League,CL
+2016-04-06,Wolfsburg,Real Madrid,2,0,H,Gianluca Rocchi,0.0,0.0,,,4.6,7.23,10.4,10.92,,,1.8,1.85,,,1516,Champions_League,CL
+2016-04-06,Paris Saint-Germain,Manchester City,2,2,D,Milorad Mažić,0.0,0.0,,,5.2,4.25,11.5,13.0,,,2.2,1.25,,,1516,Champions_League,CL
+2016-04-12,Manchester City,Paris Saint-Germain,1,0,H,Carlos Velasco,0.0,0.0,,,4.25,5.2,13.0,11.5,,,1.25,2.2,,,1516,Champions_League,CL
+2016-04-12,Real Madrid,Wolfsburg,3,0,H,Viktor Kassai,0.0,0.0,,,7.23,4.6,10.92,10.4,,,1.85,1.8,,,1516,Champions_League,CL
+2016-04-13,Benfica,Bayern Munich,2,2,D,Björn Kuipers,0.0,0.0,,,5.3,8.58,13.7,11.17,,,2.9,1.67,,,1516,Champions_League,CL
+2016-04-13,Atlético Madrid,Barcelona,2,0,H,Nicola Rizzoli,0.0,0.0,,,5.92,6.4,12.0,11.2,,,1.77,2.3,,,1516,Champions_League,CL
+2016-04-26,Manchester City,Real Madrid,0,0,D,Cüneyt Çakιr,0.0,0.0,,,4.25,7.23,13.0,10.92,,,1.25,1.85,,,1516,Champions_League,CL
+2016-04-27,Atlético Madrid,Bayern Munich,1,0,H,Mark Clattenburg,0.0,0.0,,,5.92,8.58,12.0,11.17,,,1.77,1.67,,,1516,Champions_League,CL
+2016-05-03,Bayern Munich,Atlético Madrid,2,1,H,Cüneyt Çakιr,0.0,0.0,,,8.58,5.92,11.17,12.0,,,1.67,1.77,,,1516,Champions_League,CL
+2016-05-04,Real Madrid,Manchester City,1,0,H,Damir Skomina,0.0,0.0,,,7.23,4.25,10.92,13.0,,,1.85,1.25,,,1516,Champions_League,CL

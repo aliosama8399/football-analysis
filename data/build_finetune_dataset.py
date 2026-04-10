@@ -102,54 +102,55 @@ def build_user_prompt(row: pd.Series, builder, graph, model, edge_idx: int,
     away = row['AwayTeam']
 
     # ── Home team stats (readable) ──
-    home_stats = []
+    home_stats = {}
     for suffix, label in FEATURE_LABELS.items():
         col = f'Home{suffix}'
         val = row.get(col, None)
         if val is not None and not pd.isna(val):
-            home_stats.append(f"  - {label}: {val:.2f}")
-    home_block = "\n".join(home_stats) if home_stats else "  (no recent stats available)"
+            home_stats[label] = round(val, 2)
 
     # ── Away team stats (readable) ──
-    away_stats = []
+    away_stats = {}
     for suffix, label in FEATURE_LABELS.items():
         col = f'Away{suffix}'
         val = row.get(col, None)
         if val is not None and not pd.isna(val):
-            away_stats.append(f"  - {label}: {val:.2f}")
-    away_block = "\n".join(away_stats) if away_stats else "  (no recent stats available)"
+            away_stats[label] = round(val, 2)
 
     # ── Head-to-head ──
-    h2h_parts = []
+    h2h_parts = {}
     for col, label in [('H2H_Matches', 'Total meetings'), ('H2H_HomeWins', 'Home wins'),
                         ('H2H_AwayWins', 'Away wins'), ('H2H_Draws', 'Draws')]:
         val = row.get(col, None)
         if val is not None and not pd.isna(val):
-            h2h_parts.append(f"{label}: {int(val)}")
-    h2h_block = ", ".join(h2h_parts) if h2h_parts else "No head-to-head data"
+            h2h_parts[label] = int(val)
 
     # ── Key historical matches from GNN ──
     hist_lines = []
     for m in gnn_explanation.get('top_influencing_matches', [])[:3]:
-        hist_lines.append(f"  - {m['match']}")
-    hist_block = "\n".join(hist_lines) if hist_lines else "  (none identified)"
+        hist_lines.append(m['match'])
 
-    prompt = f"""Analyze the upcoming match: {home} (Home) vs {away} (Away).
-
-{home} recent form (last 5 matches):
-{home_block}
-
-{away} recent form (last 5 matches):
-{away_block}
-
-Head-to-Head: {h2h_block}
-
-Key recent encounters that shaped current form:
-{hist_block}
-
-Prediction: {pred} (Home {probs['H']:.1%} | Draw {probs['D']:.1%} | Away {probs['A']:.1%})"""
-
-    return prompt
+    payload = {
+        "match": {
+            "home_team": home,
+            "away_team": away
+        },
+        "statistics": {
+            "home_form": home_stats,
+            "away_form": away_stats,
+            "head_to_head": h2h_parts
+        },
+        "neural_network_prediction": {
+            "outcome": pred,
+            "probabilities": {
+                "home_win": round(probs['H'], 3),
+                "draw": round(probs['D'], 3),
+                "away_win": round(probs['A'], 3)
+            },
+            "influential_historical_matches": hist_lines
+        }
+    }
+    return json.dumps(payload, indent=2)
 
 
 def get_edge_idx_for_match(graph, builder, home_team, away_team):

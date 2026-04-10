@@ -1,0 +1,126 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,Referee,Home_xG,Away_xG,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR,Season,League,Div
+2017-09-12,Benfica,CSKA Moscow,1,2,A,Alberto Undiano,0.0,0.0,14.67,11.83,2.83,3.67,10.83,13.17,23.0,9.83,2.17,2.17,,,1718,Champions_League,CL
+2017-09-12,Manchester Utd,Basel,3,0,H,Ruddy Buquet,0.0,0.0,13.62,10.25,4.75,4.38,12.12,12.38,17.38,11.0,1.25,1.75,,,1718,Champions_League,CL
+2017-09-12,Chelsea,Qarabağ,6,0,H,Tasos Sidiropoulos,0.0,0.0,15.38,6.33,5.12,1.67,11.88,12.17,13.0,6.5,1.25,2.33,,,1718,Champions_League,CL
+2017-09-12,Celtic,Paris Saint-Germain,0,5,A,Daniele Orsato,0.0,0.0,8.83,15.12,3.5,6.5,8.33,10.25,8.67,13.25,1.0,1.62,,,1718,Champions_League,CL
+2017-09-12,Barcelona,Juventus,3,0,H,Damir Skomina,0.0,0.0,12.9,12.5,5.3,4.8,10.3,14.3,10.4,16.0,1.9,2.7,,,1718,Champions_League,CL
+2017-09-12,Bayern Munich,Anderlecht,3,0,H,Paolo Tagliavento,0.0,0.0,18.75,9.67,6.83,3.5,11.58,11.5,30.25,14.33,1.92,1.0,,,1718,Champions_League,CL
+2017-09-12,Roma,Atlético Madrid,0,0,D,Milorad Mažić,0.0,0.0,14.25,17.5,5.08,5.5,9.5,13.17,21.08,19.5,1.42,1.17,,,1718,Champions_League,CL
+2017-09-12,Olympiacos,Sporting CP,2,3,A,Viktor Kassai,0.0,0.0,7.67,9.5,2.17,3.33,14.67,15.83,13.83,12.33,2.5,3.17,,,1718,Champions_League,CL
+2017-09-13,Tottenham Hotspur,Dortmund,3,1,H,Gianluca Rocchi,0.0,0.0,14.62,14.33,5.75,3.83,14.5,8.83,17.5,20.67,1.62,1.67,,,1718,Champions_League,CL
+2017-09-13,Liverpool,Sevilla,2,2,D,Danny Makkelie,0.0,0.0,15.46,15.7,6.69,5.2,12.08,9.9,17.31,19.3,1.69,1.9,,,1718,Champions_League,CL
+2017-09-13,Porto,Beşiktaş,1,3,A,Anthony Taylor,0.0,0.0,12.62,10.0,4.12,4.25,13.88,12.62,14.75,16.25,1.75,2.5,,,1718,Champions_League,CL
+2017-09-13,NK Maribor,Spartak Moscow,1,1,D,Deniz Aytekin,0.0,0.0,10.33,12.67,2.67,4.0,10.17,11.0,8.5,12.83,1.5,2.0,,,1718,Champions_League,CL
+2017-09-13,Feyenoord,Manchester City,0,4,A,Szymon Marciniak,0.0,0.0,9.0,13.3,3.83,4.3,15.0,9.2,13.17,17.2,2.83,1.9,,,1718,Champions_League,CL
+2017-09-13,Real Madrid,APOEL FC,3,0,H,Benoît Bastien,0.0,0.0,17.0,8.33,6.54,2.17,9.92,10.5,21.69,10.33,1.62,2.17,,,1718,Champions_League,CL
+2017-09-13,RB Leipzig,Monaco,1,1,D,Michael Oliver,0.0,0.0,15.0,11.17,4.5,3.5,14.67,14.5,14.83,19.83,1.83,2.33,,,1718,Champions_League,CL
+2017-09-13,Shakhtar Donetsk,Napoli,2,1,H,Felix Zwayer,0.0,0.0,10.75,11.5,4.12,4.5,10.62,11.67,11.0,17.5,2.12,2.17,,,1718,Champions_League,CL
+2017-09-26,Manchester City,Shakhtar Donetsk,2,0,H,Jorge de Sousa,0.0,0.0,13.3,10.75,4.3,4.12,9.2,10.62,17.2,11.0,1.9,2.12,,,1718,Champions_League,CL
+2017-09-26,Monaco,Porto,0,3,A,Slavko Vinčić,0.0,0.0,11.17,12.62,3.5,4.12,14.5,13.88,19.83,14.75,2.33,1.75,,,1718,Champions_League,CL
+2017-09-26,Sevilla,NK Maribor,3,0,H,Aliaksei Kulbakov,0.0,0.0,15.7,10.33,5.2,2.67,9.9,10.17,19.3,8.5,1.9,1.5,,,1718,Champions_League,CL
+2017-09-26,Dortmund,Real Madrid,1,3,A,Björn Kuipers,0.0,0.0,14.33,17.0,3.83,6.54,8.83,9.92,20.67,21.69,1.67,1.62,,,1718,Champions_League,CL
+2017-09-26,Napoli,Feyenoord,3,1,H,William Collum,0.0,0.0,11.5,9.0,4.5,3.83,11.67,15.0,17.5,13.17,2.17,2.83,,,1718,Champions_League,CL
+2017-09-26,Beşiktaş,RB Leipzig,2,0,H,Sergey Karasev,0.0,0.0,10.0,15.0,4.25,4.5,12.62,14.67,16.25,14.83,2.5,1.83,,,1718,Champions_League,CL
+2017-09-26,Spartak Moscow,Liverpool,1,1,D,Clément Turpin,0.0,0.0,12.67,15.46,4.0,6.69,11.0,12.08,12.83,17.31,2.0,1.69,,,1718,Champions_League,CL
+2017-09-26,APOEL FC,Tottenham Hotspur,0,3,A,Pavel Královec,0.0,0.0,8.33,14.62,2.17,5.75,10.5,14.5,10.33,17.5,2.17,1.62,,,1718,Champions_League,CL
+2017-09-28,CSKA Moscow,Manchester Utd,1,4,A,Jonas Eriksson,0.0,0.0,11.83,13.62,3.67,4.75,13.17,12.12,9.83,17.38,2.17,1.25,,,1718,Champions_League,CL
+2017-09-27,Sporting CP,Barcelona,0,1,A,Ovidiu Hațegan,0.0,0.0,9.5,12.9,3.33,5.3,15.83,10.3,12.33,10.4,3.17,1.9,,,1718,Champions_League,CL
+2017-09-27,Qarabağ,Roma,1,2,A,Artur Soares Dias,0.0,0.0,6.33,14.25,1.67,5.08,12.17,9.5,6.5,21.08,2.33,1.42,,,1718,Champions_League,CL
+2017-09-27,Paris Saint-Germain,Bayern Munich,3,0,H,Antonio Matéu Lahoz,0.0,0.0,15.12,18.75,6.5,6.83,10.25,11.58,13.25,30.25,1.62,1.92,,,1718,Champions_League,CL
+2017-09-27,Anderlecht,Celtic,0,3,A,Jesús Gil,0.0,0.0,9.67,8.83,3.5,3.5,11.5,8.33,14.33,8.67,1.0,1.0,,,1718,Champions_League,CL
+2017-09-27,Atlético Madrid,Chelsea,1,2,A,Cüneyt Çakιr,0.0,0.0,17.5,15.38,5.5,5.12,13.17,11.88,19.5,13.0,1.17,1.25,,,1718,Champions_League,CL
+2017-09-27,Basel,Benfica,5,0,H,Craig Thomson,0.0,0.0,10.25,14.67,4.38,2.83,12.38,10.83,11.0,23.0,1.75,2.17,,,1718,Champions_League,CL
+2017-09-27,Juventus,Olympiacos,2,0,H,Tobias Stieler,0.0,0.0,12.5,7.67,4.8,2.17,14.3,14.67,16.0,13.83,2.7,2.5,,,1718,Champions_League,CL
+2017-10-17,Manchester City,Napoli,2,1,H,Antonio Matéu Lahoz,0.0,0.0,13.3,11.5,4.3,4.5,9.2,11.67,17.2,17.5,1.9,2.17,,,1718,Champions_League,CL
+2017-10-17,Feyenoord,Shakhtar Donetsk,1,2,A,Alberto Undiano,0.0,0.0,9.0,10.75,3.83,4.12,15.0,10.62,13.17,11.0,2.83,2.12,,,1718,Champions_League,CL
+2017-10-17,NK Maribor,Liverpool,0,7,A,Viktor Kassai,0.0,0.0,10.33,15.46,2.67,6.69,10.17,12.08,8.5,17.31,1.5,1.69,,,1718,Champions_League,CL
+2017-10-17,Monaco,Beşiktaş,1,2,A,Milorad Mažić,0.0,0.0,11.17,10.0,3.5,4.25,14.5,12.62,19.83,16.25,2.33,2.5,,,1718,Champions_League,CL
+2017-10-17,RB Leipzig,Porto,3,2,H,Paolo Tagliavento,0.0,0.0,15.0,12.62,4.5,4.12,14.67,13.88,14.83,14.75,1.83,1.75,,,1718,Champions_League,CL
+2017-10-17,Real Madrid,Tottenham Hotspur,1,1,D,Szymon Marciniak,0.0,0.0,17.0,14.62,6.54,5.75,9.92,14.5,21.69,17.5,1.62,1.62,,,1718,Champions_League,CL
+2017-10-17,Spartak Moscow,Sevilla,5,1,H,Gianluca Rocchi,0.0,0.0,12.67,15.7,4.0,5.2,11.0,9.9,12.83,19.3,2.0,1.9,,,1718,Champions_League,CL
+2017-10-17,APOEL FC,Dortmund,1,1,D,Aliaksei Kulbakov,0.0,0.0,8.33,14.33,2.17,3.83,10.5,8.83,10.33,20.67,2.17,1.67,,,1718,Champions_League,CL
+2017-10-18,Chelsea,Roma,3,3,D,Damir Skomina,0.0,0.0,15.38,14.25,5.12,5.08,11.88,9.5,13.0,21.08,1.25,1.42,,,1718,Champions_League,CL
+2017-10-18,Benfica,Manchester Utd,0,1,A,Felix Zwayer,0.0,0.0,14.67,13.62,2.83,4.75,10.83,12.12,23.0,17.38,2.17,1.25,,,1718,Champions_League,CL
+2017-10-18,Qarabağ,Atlético Madrid,0,0,D,Ruddy Buquet,0.0,0.0,6.33,17.5,1.67,5.5,12.17,13.17,6.5,19.5,2.33,1.17,,,1718,Champions_League,CL
+2017-10-18,Bayern Munich,Celtic,3,0,H,Sergey Karasev,0.0,0.0,18.75,8.83,6.83,3.5,11.58,8.33,30.25,8.67,1.92,1.0,,,1718,Champions_League,CL
+2017-10-18,Anderlecht,Paris Saint-Germain,0,4,A,Pavel Královec,0.0,0.0,9.67,15.12,3.5,6.5,11.5,10.25,14.33,13.25,1.0,1.62,,,1718,Champions_League,CL
+2017-10-18,Barcelona,Olympiacos,3,1,H,William Collum,0.0,0.0,12.9,7.67,5.3,2.17,10.3,14.67,10.4,13.83,1.9,2.5,,,1718,Champions_League,CL
+2017-10-18,Juventus,Sporting CP,2,1,H,Michael Oliver,0.0,0.0,12.5,9.5,4.8,3.33,14.3,15.83,16.0,12.33,2.7,3.17,,,1718,Champions_League,CL
+2017-10-18,CSKA Moscow,Basel,0,2,A,Björn Kuipers,0.0,0.0,11.83,10.25,3.67,4.38,13.17,12.38,9.83,11.0,2.17,1.75,,,1718,Champions_League,CL
+2017-10-31,Manchester Utd,Benfica,2,0,H,Gediminas Mažeika,0.0,0.0,13.62,14.67,4.75,2.83,12.12,10.83,17.38,23.0,1.25,2.17,,,1718,Champions_League,CL
+2017-10-31,Sporting CP,Juventus,1,1,D,Clément Turpin,0.0,0.0,9.5,12.5,3.33,4.8,15.83,14.3,12.33,16.0,3.17,2.7,,,1718,Champions_League,CL
+2017-10-31,Celtic,Bayern Munich,1,2,A,Danny Makkelie,0.0,0.0,8.83,18.75,3.5,6.83,8.33,11.58,8.67,30.25,1.0,1.92,,,1718,Champions_League,CL
+2017-10-31,Roma,Chelsea,3,0,H,Jonas Eriksson,0.0,0.0,14.25,15.38,5.08,5.12,9.5,11.88,21.08,13.0,1.42,1.25,,,1718,Champions_League,CL
+2017-10-31,Paris Saint-Germain,Anderlecht,5,0,H,David Fernández,0.0,0.0,15.12,9.67,6.5,3.5,10.25,11.5,13.25,14.33,1.62,1.0,,,1718,Champions_League,CL
+2017-10-31,Basel,CSKA Moscow,1,2,A,Milorad Mažić,0.0,0.0,10.25,11.83,4.38,3.67,12.38,13.17,11.0,9.83,1.75,2.17,,,1718,Champions_League,CL
+2017-10-31,Atlético Madrid,Qarabağ,1,1,D,Deniz Aytekin,0.0,0.0,17.5,6.33,5.5,1.67,13.17,12.17,19.5,6.5,1.17,2.33,,,1718,Champions_League,CL
+2017-10-31,Olympiacos,Barcelona,0,0,D,Anthony Taylor,0.0,0.0,7.67,12.9,2.17,5.3,14.67,10.3,13.83,10.4,2.5,1.9,,,1718,Champions_League,CL
+2017-11-01,Tottenham Hotspur,Real Madrid,3,1,H,Cüneyt Çakιr,0.0,0.0,14.62,17.0,5.75,6.54,14.5,9.92,17.5,21.69,1.62,1.62,,,1718,Champions_League,CL
+2017-11-01,Porto,RB Leipzig,3,1,H,Ovidiu Hațegan,0.0,0.0,12.62,15.0,4.12,4.5,13.88,14.67,14.75,14.83,1.75,1.83,,,1718,Champions_League,CL
+2017-11-01,Liverpool,NK Maribor,3,0,H,Ivan Kružliak,0.0,0.0,15.46,10.33,6.69,2.67,12.08,10.17,17.31,8.5,1.69,1.5,,,1718,Champions_League,CL
+2017-11-01,Beşiktaş,Monaco,1,1,D,Paolo Tagliavento,0.0,0.0,10.0,11.17,4.25,3.5,12.62,14.5,16.25,19.83,2.5,2.33,,,1718,Champions_League,CL
+2017-11-01,Napoli,Manchester City,2,4,A,Felix Brych,0.0,0.0,11.5,13.3,4.5,4.3,11.67,9.2,17.5,17.2,2.17,1.9,,,1718,Champions_League,CL
+2017-11-01,Dortmund,APOEL FC,1,1,D,Matej Jug,0.0,0.0,14.33,8.33,3.83,2.17,8.83,10.5,20.67,10.33,1.67,2.17,,,1718,Champions_League,CL
+2017-11-01,Sevilla,Spartak Moscow,2,1,H,Artur Soares Dias,0.0,0.0,15.7,12.67,5.2,4.0,9.9,11.0,19.3,12.83,1.9,2.0,,,1718,Champions_League,CL
+2017-11-01,Shakhtar Donetsk,Feyenoord,3,1,H,Tasos Sidiropoulos,0.0,0.0,10.75,9.0,4.12,3.83,10.62,15.0,11.0,13.17,2.12,2.83,,,1718,Champions_League,CL
+2017-11-21,Manchester City,Feyenoord,1,0,H,Ivan Kružliak,0.0,0.0,13.3,9.0,4.3,3.83,9.2,15.0,17.2,13.17,1.9,2.83,,,1718,Champions_League,CL
+2017-11-21,Beşiktaş,Porto,1,1,D,Antonio Matéu Lahoz,0.0,0.0,10.0,12.62,4.25,4.12,12.62,13.88,16.25,14.75,2.5,1.75,,,1718,Champions_League,CL
+2017-11-21,Spartak Moscow,NK Maribor,1,1,D,William Collum,0.0,0.0,12.67,10.33,4.0,2.67,11.0,10.17,12.83,8.5,2.0,1.5,,,1718,Champions_League,CL
+2017-11-21,Dortmund,Tottenham Hotspur,1,2,A,Clément Turpin,0.0,0.0,14.33,14.62,3.83,5.75,8.83,14.5,20.67,17.5,1.67,1.62,,,1718,Champions_League,CL
+2017-11-21,Monaco,RB Leipzig,1,4,A,Alberto Undiano,0.0,0.0,11.17,15.0,3.5,4.5,14.5,14.67,19.83,14.83,2.33,1.83,,,1718,Champions_League,CL
+2017-11-21,Napoli,Shakhtar Donetsk,3,0,H,Damir Skomina,0.0,0.0,11.5,10.75,4.5,4.12,11.67,10.62,17.5,11.0,2.17,2.12,,,1718,Champions_League,CL
+2017-11-21,Sevilla,Liverpool,3,3,D,Felix Brych,0.0,0.0,15.7,15.46,5.2,6.69,9.9,12.08,19.3,17.31,1.9,1.69,,,1718,Champions_League,CL
+2017-11-21,APOEL FC,Real Madrid,0,6,A,Artur Soares Dias,0.0,0.0,8.33,17.0,2.17,6.54,10.5,9.92,10.33,21.69,2.17,1.62,,,1718,Champions_League,CL
+2017-11-22,Sporting CP,Olympiacos,3,1,H,Felix Zwayer,0.0,0.0,9.5,7.67,3.33,2.17,15.83,14.67,12.33,13.83,3.17,2.5,,,1718,Champions_League,CL
+2017-11-22,CSKA Moscow,Benfica,2,0,H,Deniz Aytekin,0.0,0.0,11.83,14.67,3.67,2.83,13.17,10.83,9.83,23.0,2.17,2.17,,,1718,Champions_League,CL
+2017-11-22,Anderlecht,Bayern Munich,1,2,A,Anthony Taylor,0.0,0.0,9.67,18.75,3.5,6.83,11.5,11.58,14.33,30.25,1.0,1.92,,,1718,Champions_League,CL
+2017-11-22,Atlético Madrid,Roma,2,0,H,Björn Kuipers,0.0,0.0,17.5,14.25,5.5,5.08,13.17,9.5,19.5,21.08,1.17,1.42,,,1718,Champions_League,CL
+2017-11-22,Paris Saint-Germain,Celtic,7,1,H,Tasos Sidiropoulos,0.0,0.0,15.12,8.83,6.5,3.5,10.25,8.33,13.25,8.67,1.62,1.0,,,1718,Champions_League,CL
+2017-11-22,Basel,Manchester Utd,1,0,H,Daniele Orsato,0.0,0.0,10.25,13.62,4.38,4.75,12.38,12.12,11.0,17.38,1.75,1.25,,,1718,Champions_League,CL
+2017-11-22,Juventus,Barcelona,0,0,D,Milorad Mažić,0.0,0.0,12.5,12.9,4.8,5.3,14.3,10.3,16.0,10.4,2.7,1.9,,,1718,Champions_League,CL
+2017-11-22,Qarabağ,Chelsea,0,4,A,Jorge de Sousa,0.0,0.0,6.33,15.38,1.67,5.12,12.17,11.88,6.5,13.0,2.33,1.25,,,1718,Champions_League,CL
+2017-12-05,Benfica,Basel,0,2,A,Jesús Gil,0.0,0.0,14.67,10.25,2.83,4.38,10.83,12.38,23.0,11.0,2.17,1.75,,,1718,Champions_League,CL
+2017-12-05,Manchester Utd,CSKA Moscow,2,1,H,Gianluca Rocchi,0.0,0.0,13.62,11.83,4.75,3.67,12.12,13.17,17.38,9.83,1.25,2.17,,,1718,Champions_League,CL
+2017-12-05,Celtic,Anderlecht,0,1,A,Matej Jug,0.0,0.0,8.83,9.67,3.5,3.5,8.33,11.5,8.67,14.33,1.0,1.0,,,1718,Champions_League,CL
+2017-12-05,Chelsea,Atlético Madrid,1,1,D,Danny Makkelie,0.0,0.0,15.38,17.5,5.12,5.5,11.88,13.17,13.0,19.5,1.25,1.17,,,1718,Champions_League,CL
+2017-12-05,Bayern Munich,Paris Saint-Germain,3,1,H,Cüneyt Çakιr,0.0,0.0,18.75,15.12,6.83,6.5,11.58,10.25,30.25,13.25,1.92,1.62,,,1718,Champions_League,CL
+2017-12-05,Roma,Qarabağ,1,0,H,Tobias Stieler,0.0,0.0,14.25,6.33,5.08,1.67,9.5,12.17,21.08,6.5,1.42,2.33,,,1718,Champions_League,CL
+2017-12-05,Barcelona,Sporting CP,2,0,H,Craig Thomson,0.0,0.0,12.9,9.5,5.3,3.33,10.3,15.83,10.4,12.33,1.9,3.17,,,1718,Champions_League,CL
+2017-12-05,Olympiacos,Juventus,0,2,A,David Fernández,0.0,0.0,7.67,12.5,2.17,4.8,14.67,14.3,13.83,16.0,2.5,2.7,,,1718,Champions_League,CL
+2017-12-06,Porto,Monaco,5,2,H,Jonas Eriksson,0.0,0.0,12.62,11.17,4.12,3.5,13.88,14.5,14.75,19.83,1.75,2.33,,,1718,Champions_League,CL
+2017-12-06,Liverpool,Spartak Moscow,7,0,H,Szymon Marciniak,0.0,0.0,15.46,12.67,6.69,4.0,12.08,11.0,17.31,12.83,1.69,2.0,,,1718,Champions_League,CL
+2017-12-06,Tottenham Hotspur,APOEL FC,3,0,H,Slavko Vinčić,0.0,0.0,14.62,8.33,5.75,2.17,14.5,10.5,17.5,10.33,1.62,2.17,,,1718,Champions_League,CL
+2017-12-06,NK Maribor,Sevilla,1,1,D,Ovidiu Hațegan,0.0,0.0,10.33,15.7,2.67,5.2,10.17,9.9,8.5,19.3,1.5,1.9,,,1718,Champions_League,CL
+2017-12-06,Feyenoord,Napoli,2,1,H,Michael Oliver,0.0,0.0,9.0,11.5,3.83,4.5,15.0,11.67,13.17,17.5,2.83,2.17,,,1718,Champions_League,CL
+2017-12-06,RB Leipzig,Beşiktaş,1,2,A,Viktor Kassai,0.0,0.0,15.0,10.0,4.5,4.25,14.67,12.62,14.83,16.25,1.83,2.5,,,1718,Champions_League,CL
+2017-12-06,Real Madrid,Dortmund,3,2,H,Pavel Královec,0.0,0.0,17.0,14.33,6.54,3.83,9.92,8.83,21.69,20.67,1.62,1.67,,,1718,Champions_League,CL
+2017-12-06,Shakhtar Donetsk,Manchester City,2,1,H,Benoît Bastien,0.0,0.0,10.75,13.3,4.12,4.3,10.62,9.2,11.0,17.2,2.12,1.9,,,1718,Champions_League,CL
+2018-02-13,Juventus,Tottenham Hotspur,2,2,D,Felix Brych,0.0,0.0,12.5,14.62,4.8,5.75,14.3,14.5,16.0,17.5,2.7,1.62,,,1718,Champions_League,CL
+2018-02-13,Basel,Manchester City,0,4,A,Jonas Eriksson,0.0,0.0,10.25,13.3,4.38,4.3,12.38,9.2,11.0,17.2,1.75,1.9,,,1718,Champions_League,CL
+2018-02-14,Porto,Liverpool,0,5,A,Daniele Orsato,0.0,0.0,12.62,15.46,4.12,6.69,13.88,12.08,14.75,17.31,1.75,1.69,,,1718,Champions_League,CL
+2018-02-14,Real Madrid,Paris Saint-Germain,3,1,H,Gianluca Rocchi,0.0,0.0,17.0,15.12,6.54,6.5,9.92,10.25,21.69,13.25,1.62,1.62,,,1718,Champions_League,CL
+2018-02-20,Chelsea,Barcelona,1,1,D,Cüneyt Çakιr,0.0,0.0,15.38,12.9,5.12,5.3,11.88,10.3,13.0,10.4,1.25,1.9,,,1718,Champions_League,CL
+2018-02-20,Bayern Munich,Beşiktaş,5,0,H,Ovidiu Hațegan,0.0,0.0,18.75,10.0,6.83,4.25,11.58,12.62,30.25,16.25,1.92,2.5,,,1718,Champions_League,CL
+2018-02-21,Sevilla,Manchester Utd,0,0,D,Clément Turpin,0.0,0.0,15.7,13.62,5.2,4.75,9.9,12.12,19.3,17.38,1.9,1.25,,,1718,Champions_League,CL
+2018-02-21,Shakhtar Donetsk,Roma,2,1,H,William Collum,0.0,0.0,10.75,14.25,4.12,5.08,10.62,9.5,11.0,21.08,2.12,1.42,,,1718,Champions_League,CL
+2018-03-06,Liverpool,Porto,0,0,D,Felix Zwayer,0.0,0.0,15.46,12.62,6.69,4.12,12.08,13.88,17.31,14.75,1.69,1.75,,,1718,Champions_League,CL
+2018-03-06,Paris Saint-Germain,Real Madrid,1,2,A,Felix Brych,0.0,0.0,15.12,17.0,6.5,6.54,10.25,9.92,13.25,21.69,1.62,1.62,,,1718,Champions_League,CL
+2018-03-07,Manchester City,Basel,1,2,A,Pavel Královec,0.0,0.0,13.3,10.25,4.3,4.38,9.2,12.38,17.2,11.0,1.9,1.75,,,1718,Champions_League,CL
+2018-03-07,Tottenham Hotspur,Juventus,1,2,A,Szymon Marciniak,0.0,0.0,14.62,12.5,5.75,4.8,14.5,14.3,17.5,16.0,1.62,2.7,,,1718,Champions_League,CL
+2018-03-13,Manchester Utd,Sevilla,1,2,A,Danny Makkelie,0.0,0.0,13.62,15.7,4.75,5.2,12.12,9.9,17.38,19.3,1.25,1.9,,,1718,Champions_League,CL
+2018-03-13,Roma,Shakhtar Donetsk,1,0,H,Alberto Undiano,0.0,0.0,14.25,10.75,5.08,4.12,9.5,10.62,21.08,11.0,1.42,2.12,,,1718,Champions_League,CL
+2018-03-14,Beşiktaş,Bayern Munich,1,3,A,Michael Oliver,0.0,0.0,10.0,18.75,4.25,6.83,12.62,11.58,16.25,30.25,2.5,1.92,,,1718,Champions_League,CL
+2018-03-14,Barcelona,Chelsea,3,0,H,Damir Skomina,0.0,0.0,12.9,15.38,5.3,5.12,10.3,11.88,10.4,13.0,1.9,1.25,,,1718,Champions_League,CL
+2018-04-03,Sevilla,Bayern Munich,1,2,A,Daniele Orsato,0.0,0.0,15.7,18.75,5.2,6.83,9.9,11.58,19.3,30.25,1.9,1.92,,,1718,Champions_League,CL
+2018-04-03,Juventus,Real Madrid,0,3,A,Cüneyt Çakιr,0.0,0.0,12.5,17.0,4.8,6.54,14.3,9.92,16.0,21.69,2.7,1.62,,,1718,Champions_League,CL
+2018-04-04,Liverpool,Manchester City,3,0,H,Felix Brych,0.0,0.0,15.46,13.3,6.69,4.3,12.08,9.2,17.31,17.2,1.69,1.9,,,1718,Champions_League,CL
+2018-04-04,Barcelona,Roma,4,1,H,Danny Makkelie,0.0,0.0,12.9,14.25,5.3,5.08,10.3,9.5,10.4,21.08,1.9,1.42,,,1718,Champions_League,CL
+2018-04-10,Manchester City,Liverpool,1,2,A,Antonio Matéu Lahoz,0.0,0.0,13.3,15.46,4.3,6.69,9.2,12.08,17.2,17.31,1.9,1.69,,,1718,Champions_League,CL
+2018-04-10,Roma,Barcelona,3,0,H,Clément Turpin,0.0,0.0,14.25,12.9,5.08,5.3,9.5,10.3,21.08,10.4,1.42,1.9,,,1718,Champions_League,CL
+2018-04-11,Bayern Munich,Sevilla,0,0,D,William Collum,0.0,0.0,18.75,15.7,6.83,5.2,11.58,9.9,30.25,19.3,1.92,1.9,,,1718,Champions_League,CL
+2018-04-11,Real Madrid,Juventus,1,3,A,Michael Oliver,0.0,0.0,17.0,12.5,6.54,4.8,9.92,14.3,21.69,16.0,1.62,2.7,,,1718,Champions_League,CL
+2018-04-24,Liverpool,Roma,5,2,H,Felix Brych,0.0,0.0,15.46,14.25,6.69,5.08,12.08,9.5,17.31,21.08,1.69,1.42,,,1718,Champions_League,CL
+2018-04-25,Bayern Munich,Real Madrid,1,2,A,Björn Kuipers,0.0,0.0,18.75,17.0,6.83,6.54,11.58,9.92,30.25,21.69,1.92,1.62,,,1718,Champions_League,CL
+2018-05-01,Real Madrid,Bayern Munich,2,2,D,Cüneyt Çakιr,0.0,0.0,17.0,18.75,6.54,6.83,9.92,11.58,21.69,30.25,1.62,1.92,,,1718,Champions_League,CL
+2018-05-02,Roma,Liverpool,4,2,H,Damir Skomina,0.0,0.0,14.25,15.46,5.08,6.69,9.5,12.08,21.08,17.31,1.42,1.69,,,1718,Champions_League,CL
+2018-05-26,Real Madrid,Liverpool,3,1,H,Milorad Mažić,0.0,0.0,17.0,15.46,6.54,6.69,9.92,12.08,21.69,17.31,1.62,1.69,,,1718,Champions_League,CL

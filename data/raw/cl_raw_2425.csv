@@ -1,0 +1,188 @@
+Date,HomeTeam,AwayTeam,FTHG,FTAG,FTR,Referee,Home_xG,Away_xG,HS,AS,HST,AST,HF,AF,HC,AC,HY,AY,HR,AR,Season,League,Div
+2024-09-17,Young Boys,Aston Villa,0,3,A,Georgi Kabakov,0.0,0.0,10.12,12.67,2.25,5.08,14.5,10.25,14.75,11.42,3.0,1.58,0.0,0.0,2425,Champions_League,CL
+2024-09-17,Juventus,PSV,3,1,H,Alejandro Hernández,0.0,0.0,11.5,17.17,3.7,6.33,11.3,10.58,18.7,20.42,1.5,2.0,0.2,0.08,2425,Champions_League,CL
+2024-09-17,Sporting CP,Lille,2,0,H,Donatas Rumšas,0.0,0.0,12.2,9.3,4.1,3.6,10.4,10.1,11.5,9.5,1.7,2.3,0.0,0.2,2425,Champions_League,CL
+2024-09-17,Real Madrid,Stuttgart,3,1,H,Halil Umut Meler,0.0,0.0,14.93,17.25,5.93,5.38,11.57,11.38,16.71,22.0,2.43,1.62,0.07,0.0,2425,Champions_League,CL
+2024-09-17,Milan,Liverpool,1,3,A,Espen Eskås,0.0,0.0,14.9,14.3,5.9,5.7,10.7,10.7,13.2,16.6,2.8,1.9,0.2,0.1,2425,Champions_League,CL
+2024-09-17,Bayern Munich,Dinamo Zagreb,9,2,H,Juan Martínez,0.0,0.0,20.14,9.38,7.21,3.0,9.64,10.5,22.86,13.25,1.57,2.38,0.0,0.0,2425,Champions_League,CL
+2024-09-18,Sparta Prague,RB Salzburg,3,0,H,Rade Obrenović,0.0,0.0,9.38,9.25,2.62,2.75,10.12,11.5,9.62,13.38,1.62,2.0,0.0,0.12,2425,Champions_League,CL
+2024-09-18,Bologna,Shakhtar Donetsk,0,0,D,Rohit Saggi,0.0,0.0,11.75,9.25,3.38,2.5,14.38,10.62,17.0,11.38,3.5,1.62,0.0,0.12,2425,Champions_League,CL
+2024-09-18,Celtic,Slovan Bratislava,5,1,H,Danny Makkelie,0.0,0.0,9.4,7.62,3.7,2.25,9.2,9.0,13.8,9.5,1.0,2.12,0.1,0.12,2425,Champions_League,CL
+2024-09-18,Manchester City,Inter,0,0,D,Glenn Nyberg,0.0,0.0,16.7,11.67,6.2,3.8,7.9,9.53,19.4,13.13,1.1,2.2,0.0,0.0,2425,Champions_League,CL
+2024-09-18,Club Brugge,Dortmund,0,3,A,Irfan Peljto,0.0,0.0,10.08,13.64,3.58,5.36,8.67,12.29,10.08,18.0,1.58,1.71,0.17,0.0,2425,Champions_League,CL
+2024-09-18,Paris Saint-Germain,Girona,1,0,H,Daniel Siebert,0.0,0.0,18.76,9.62,6.76,3.5,9.12,14.5,14.88,16.12,1.12,3.12,0.06,0.12,2425,Champions_League,CL
+2024-09-19,Red Star,Benfica,1,2,A,Michael Oliver,0.0,0.0,11.62,13.92,3.75,5.33,9.62,10.83,21.25,14.67,1.62,2.33,0.0,0.08,2425,Champions_League,CL
+2024-09-19,Feyenoord,Leverkusen,0,4,A,Davide Massa,0.0,0.0,10.08,15.1,3.67,5.5,10.0,11.8,11.58,17.8,1.5,2.3,0.17,0.2,2425,Champions_League,CL
+2024-09-19,Monaco,Barcelona,2,1,H,Allard Lindhout,0.0,0.0,11.8,15.79,4.3,6.64,11.8,8.93,13.4,15.21,2.3,1.0,0.3,0.14,2425,Champions_League,CL
+2024-09-19,Atalanta,Arsenal,0,0,D,Clément Turpin,0.0,0.0,17.1,12.79,6.1,5.43,10.3,11.14,23.9,16.5,1.9,1.93,0.1,0.0,2425,Champions_League,CL
+2024-09-19,Brest,Sturm Graz,2,1,H,Nick Walsh,0.0,0.0,13.1,8.38,3.8,3.0,11.3,13.12,16.5,12.62,2.0,2.12,0.0,0.12,2425,Champions_League,CL
+2024-09-19,Atlético Madrid,RB Leipzig,2,1,H,Ivan Kružliak,0.0,0.0,12.3,12.75,4.8,4.5,10.2,11.12,17.1,16.25,1.8,1.88,0.1,0.0,2425,Champions_League,CL
+2024-10-01,Stuttgart,Sparta Prague,1,1,D,Manfredas Lukjančukas,0.0,0.0,17.25,9.38,5.38,2.62,11.38,10.12,22.0,9.62,1.62,1.62,0.0,0.0,2425,Champions_League,CL
+2024-10-01,RB Salzburg,Brest,0,4,A,Anthony Taylor,0.0,0.0,9.25,13.1,2.75,3.8,11.5,11.3,13.38,16.5,2.0,2.0,0.12,0.0,2425,Champions_League,CL
+2024-10-01,Arsenal,Paris Saint-Germain,2,0,H,Slavko Vinčič,0.0,0.0,12.79,18.76,5.43,6.76,11.14,9.12,16.5,14.88,1.93,1.12,0.0,0.06,2425,Champions_League,CL
+2024-10-01,Barcelona,Young Boys,5,0,H,Erik Lambrechts,0.0,0.0,15.79,10.12,6.64,2.25,8.93,14.5,15.21,14.75,1.0,3.0,0.14,0.0,2425,Champions_League,CL
+2024-10-01,Dortmund,Celtic,7,1,H,Jose Maria Sánchez,0.0,0.0,13.64,9.4,5.36,3.7,12.29,9.2,18.0,13.8,1.71,1.0,0.0,0.1,2425,Champions_League,CL
+2024-10-01,Inter,Red Star,4,0,H,Felix Zwayer,0.0,0.0,11.67,11.62,3.8,3.75,9.53,9.62,13.13,21.25,2.2,1.62,0.0,0.0,2425,Champions_League,CL
+2024-10-01,Slovan Bratislava,Manchester City,0,4,A,Davide Massa,0.0,0.0,7.62,16.7,2.25,6.2,9.0,7.9,9.5,19.4,2.12,1.1,0.12,0.0,2425,Champions_League,CL
+2024-10-01,PSV,Sporting CP,1,1,D,Marco Guida,0.0,0.0,17.17,12.2,6.33,4.1,10.58,10.4,20.42,11.5,2.0,1.7,0.08,0.0,2425,Champions_League,CL
+2024-10-01,Leverkusen,Milan,1,0,H,Sandro Schärer,0.0,0.0,15.1,14.9,5.5,5.9,11.8,10.7,17.8,13.2,2.3,2.8,0.2,0.2,2425,Champions_League,CL
+2024-10-02,Girona,Feyenoord,2,3,A,Urs Schnyder,0.0,0.0,9.62,10.08,3.5,3.67,14.5,10.0,16.12,11.58,3.12,1.5,0.12,0.17,2425,Champions_League,CL
+2024-10-02,Shakhtar Donetsk,Atalanta,0,3,A,João Pinheiro,0.0,0.0,9.25,17.1,2.5,6.1,10.62,10.3,11.38,23.9,1.62,1.9,0.12,0.1,2425,Champions_League,CL
+2024-10-02,Liverpool,Bologna,2,0,H,Nikola Dabanović,0.0,0.0,14.3,11.75,5.7,3.38,10.7,14.38,16.6,17.0,1.9,3.5,0.1,0.0,2425,Champions_League,CL
+2024-10-02,Aston Villa,Bayern Munich,1,0,H,Radu Petrescu,0.0,0.0,12.67,20.14,5.08,7.21,10.25,9.64,11.42,22.86,1.58,1.57,0.0,0.0,2425,Champions_League,CL
+2024-10-02,Benfica,Atlético Madrid,4,0,H,Serdar Gözübüyük,0.0,0.0,13.92,12.3,5.33,4.8,10.83,10.2,14.67,17.1,2.33,1.8,0.08,0.1,2425,Champions_League,CL
+2024-10-02,Dinamo Zagreb,Monaco,2,2,D,Harm Osmers,0.0,0.0,9.38,11.8,3.0,4.3,10.5,11.8,13.25,13.4,2.38,2.3,0.0,0.3,2425,Champions_League,CL
+2024-10-02,RB Leipzig,Juventus,2,3,A,François Letexier,0.0,0.0,12.75,11.5,4.5,3.7,11.12,11.3,16.25,18.7,1.88,1.5,0.0,0.2,2425,Champions_League,CL
+2024-10-02,Sturm Graz,Club Brugge,0,1,A,Əliyar Ağayev,0.0,0.0,8.38,10.08,3.0,3.58,13.12,8.67,12.62,10.08,2.12,1.58,0.12,0.17,2425,Champions_League,CL
+2024-10-02,Lille,Real Madrid,1,0,H,Maurizio Mariani,0.0,0.0,9.3,14.93,3.6,5.93,10.1,11.57,9.5,16.71,2.3,2.43,0.2,0.07,2425,Champions_League,CL
+2024-10-22,Monaco,Red Star,5,1,H,Tobias Stieler,0.0,0.0,11.8,11.62,4.3,3.75,11.8,9.62,13.4,21.25,2.3,1.62,0.3,0.0,2425,Champions_League,CL
+2024-10-22,Milan,Club Brugge,3,1,H,Felix Zwayer,0.0,0.0,14.9,10.08,5.9,3.58,10.7,8.67,13.2,10.08,2.8,1.58,0.2,0.17,2425,Champions_League,CL
+2024-10-22,Arsenal,Shakhtar Donetsk,1,0,H,Benoît Bastien,0.0,0.0,12.79,9.25,5.43,2.5,11.14,10.62,16.5,11.38,1.93,1.62,0.0,0.12,2425,Champions_League,CL
+2024-10-22,Aston Villa,Bologna,2,0,H,João Pinheiro,0.0,0.0,12.67,11.75,5.08,3.38,10.25,14.38,11.42,17.0,1.58,3.5,0.0,0.0,2425,Champions_League,CL
+2024-10-22,Sturm Graz,Sporting CP,0,2,A,Giorgi Kruashvili,0.0,0.0,8.38,12.2,3.0,4.1,13.12,10.4,12.62,11.5,2.12,1.7,0.12,0.0,2425,Champions_League,CL
+2024-10-22,Juventus,Stuttgart,0,1,A,Espen Eskås,0.0,0.0,11.5,17.25,3.7,5.38,11.3,11.38,18.7,22.0,1.5,1.62,0.2,0.0,2425,Champions_League,CL
+2024-10-22,Real Madrid,Dortmund,5,2,H,István Kovács,0.0,0.0,14.93,13.64,5.93,5.36,11.57,12.29,16.71,18.0,2.43,1.71,0.07,0.0,2425,Champions_League,CL
+2024-10-22,Girona,Slovan Bratislava,2,0,H,Horațiu Fesnic,0.0,0.0,9.62,7.62,3.5,2.25,14.5,9.0,16.12,9.5,3.12,2.12,0.12,0.12,2425,Champions_League,CL
+2024-10-22,Paris Saint-Germain,PSV,1,1,D,Glenn Nyberg,0.0,0.0,18.76,17.17,6.76,6.33,9.12,10.58,14.88,20.42,1.12,2.0,0.06,0.08,2425,Champions_League,CL
+2024-10-23,Brest,Leverkusen,1,1,D,Ivan Kružliak,0.0,0.0,13.1,15.1,3.8,5.5,11.3,11.8,16.5,17.8,2.0,2.3,0.0,0.2,2425,Champions_League,CL
+2024-10-23,Atalanta,Celtic,0,0,D,Irfan Peljto,0.0,0.0,17.1,9.4,6.1,3.7,10.3,9.2,23.9,13.8,1.9,1.0,0.1,0.1,2425,Champions_League,CL
+2024-10-23,Benfica,Feyenoord,1,3,A,Halil Umut Meler,0.0,0.0,13.92,10.08,5.33,3.67,10.83,10.0,14.67,11.58,2.33,1.5,0.08,0.17,2425,Champions_League,CL
+2024-10-23,Manchester City,Sparta Prague,5,0,H,Maurizio Mariani,0.0,0.0,16.7,9.38,6.2,2.62,7.9,10.12,19.4,9.62,1.1,1.62,0.0,0.0,2425,Champions_League,CL
+2024-10-23,RB Salzburg,Dinamo Zagreb,0,2,A,Danny Makkelie,0.0,0.0,9.25,9.38,2.75,3.0,11.5,10.5,13.38,13.25,2.0,2.38,0.12,0.0,2425,Champions_League,CL
+2024-10-23,Young Boys,Inter,0,1,A,Michael Oliver,0.0,0.0,10.12,11.67,2.25,3.8,14.5,9.53,14.75,13.13,3.0,2.2,0.0,0.0,2425,Champions_League,CL
+2024-10-23,Barcelona,Bayern Munich,4,1,H,Slavko Vinčič,0.0,0.0,15.79,20.14,6.64,7.21,8.93,9.64,15.21,22.86,1.0,1.57,0.14,0.0,2425,Champions_League,CL
+2024-10-23,Atlético Madrid,Lille,1,3,A,Marco Guida,0.0,0.0,12.3,9.3,4.8,3.6,10.2,10.1,17.1,9.5,1.8,2.3,0.1,0.2,2425,Champions_League,CL
+2024-10-23,RB Leipzig,Liverpool,0,1,A,Sandro Schärer,0.0,0.0,12.75,14.3,4.5,5.7,11.12,10.7,16.25,16.6,1.88,1.9,0.0,0.1,2425,Champions_League,CL
+2024-11-05,Slovan Bratislava,Dinamo Zagreb,1,4,A,Anthony Taylor,0.0,0.0,7.62,9.38,2.25,3.0,9.0,10.5,9.5,13.25,2.12,2.38,0.12,0.0,2425,Champions_League,CL
+2024-11-05,PSV,Girona,4,0,H,Michael Oliver,0.0,0.0,17.17,9.62,6.33,3.5,10.58,14.5,20.42,16.12,2.0,3.12,0.08,0.12,2425,Champions_League,CL
+2024-11-05,Sporting CP,Manchester City,4,1,H,Daniel Siebert,0.0,0.0,12.2,16.7,4.1,6.2,10.4,7.9,11.5,19.4,1.7,1.1,0.0,0.0,2425,Champions_League,CL
+2024-11-05,Liverpool,Leverkusen,4,0,H,Danny Makkelie,0.0,0.0,14.3,15.1,5.7,5.5,10.7,11.8,16.6,17.8,1.9,2.3,0.1,0.2,2425,Champions_League,CL
+2024-11-05,Celtic,RB Leipzig,3,1,H,Benoît Bastien,0.0,0.0,9.4,12.75,3.7,4.5,9.2,11.12,13.8,16.25,1.0,1.88,0.1,0.0,2425,Champions_League,CL
+2024-11-05,Bologna,Monaco,0,1,A,Əliyar Ağayev,0.0,0.0,11.75,11.8,3.38,4.3,14.38,11.8,17.0,13.4,3.5,2.3,0.0,0.3,2425,Champions_League,CL
+2024-11-05,Real Madrid,Milan,1,3,A,Slavko Vinčič,0.0,0.0,14.93,14.9,5.93,5.9,11.57,10.7,16.71,13.2,2.43,2.8,0.07,0.2,2425,Champions_League,CL
+2024-11-05,Lille,Juventus,1,1,D,Irfan Peljto,0.0,0.0,9.3,11.5,3.6,3.7,10.1,11.3,9.5,18.7,2.3,1.5,0.2,0.2,2425,Champions_League,CL
+2024-11-05,Dortmund,Sturm Graz,1,0,H,Erik Lambrechts,0.0,0.0,13.64,8.38,5.36,3.0,12.29,13.12,18.0,12.62,1.71,2.12,0.0,0.12,2425,Champions_League,CL
+2024-11-06,Club Brugge,Aston Villa,1,0,H,Tobias Stieler,0.0,0.0,10.08,12.67,3.58,5.08,8.67,10.25,10.08,11.42,1.58,1.58,0.17,0.0,2425,Champions_League,CL
+2024-11-06,Shakhtar Donetsk,Young Boys,2,1,H,Orel Grinfeeld,0.0,0.0,9.25,10.12,2.5,2.25,10.62,14.5,11.38,14.75,1.62,3.0,0.12,0.0,2425,Champions_League,CL
+2024-11-06,Paris Saint-Germain,Atlético Madrid,1,2,A,Szymon Marciniak,0.0,0.0,18.76,12.3,6.76,4.8,9.12,10.2,14.88,17.1,1.12,1.8,0.06,0.1,2425,Champions_League,CL
+2024-11-06,Bayern Munich,Benfica,1,0,H,Davide Massa,0.0,0.0,20.14,13.92,7.21,5.33,9.64,10.83,22.86,14.67,1.57,2.33,0.0,0.08,2425,Champions_League,CL
+2024-11-06,Red Star,Barcelona,2,5,A,Espen Eskås,0.0,0.0,11.62,15.79,3.75,6.64,9.62,8.93,21.25,15.21,1.62,1.0,0.0,0.14,2425,Champions_League,CL
+2024-11-06,Sparta Prague,Brest,1,2,A,Mykola Balakin,0.0,0.0,9.38,13.1,2.62,3.8,10.12,11.3,9.62,16.5,1.62,2.0,0.0,0.0,2425,Champions_League,CL
+2024-11-06,Feyenoord,RB Salzburg,1,3,A,Donatas Rumšas,0.0,0.0,10.08,9.25,3.67,2.75,10.0,11.5,11.58,13.38,1.5,2.0,0.17,0.12,2425,Champions_League,CL
+2024-11-06,Stuttgart,Atalanta,0,2,A,Rade Obrenović,0.0,0.0,17.25,17.1,5.38,6.1,11.38,10.3,22.0,23.9,1.62,1.9,0.0,0.1,2425,Champions_League,CL
+2024-11-06,Inter,Arsenal,1,0,H,István Kovács,0.0,0.0,11.67,12.79,3.8,5.43,9.53,11.14,13.13,16.5,2.2,1.93,0.0,0.0,2425,Champions_League,CL
+2024-11-26,Slovan Bratislava,Milan,2,3,A,Jose Maria Sánchez,0.0,0.0,7.62,14.9,2.25,5.9,9.0,10.7,9.5,13.2,2.12,2.8,0.12,0.2,2425,Champions_League,CL
+2024-11-26,Sparta Prague,Atlético Madrid,0,6,A,Danny Makkelie,0.0,0.0,9.38,12.3,2.62,4.8,10.12,10.2,9.62,17.1,1.62,1.8,0.0,0.1,2425,Champions_League,CL
+2024-11-26,Manchester City,Feyenoord,3,3,D,Radu Petrescu,0.0,0.0,16.7,10.08,6.2,3.67,7.9,10.0,19.4,11.58,1.1,1.5,0.0,0.17,2425,Champions_League,CL
+2024-11-26,Sporting CP,Arsenal,1,5,A,Szymon Marciniak,0.0,0.0,12.2,12.79,4.1,5.43,10.4,11.14,11.5,16.5,1.7,1.93,0.0,0.0,2425,Champions_League,CL
+2024-11-26,Barcelona,Brest,3,0,H,Irfan Peljto,0.0,0.0,15.79,13.1,6.64,3.8,8.93,11.3,15.21,16.5,1.0,2.0,0.14,0.0,2425,Champions_League,CL
+2024-11-26,Leverkusen,RB Salzburg,5,0,H,Mykola Balakin,0.0,0.0,15.1,9.25,5.5,2.75,11.8,11.5,17.8,13.38,2.3,2.0,0.2,0.12,2425,Champions_League,CL
+2024-11-26,Inter,RB Leipzig,1,0,H,João Pinheiro,0.0,0.0,11.67,12.75,3.8,4.5,9.53,11.12,13.13,16.25,2.2,1.88,0.0,0.0,2425,Champions_League,CL
+2024-11-26,Bayern Munich,Paris Saint-Germain,1,0,H,István Kovács,0.0,0.0,20.14,18.76,7.21,6.76,9.64,9.12,22.86,14.88,1.57,1.12,0.0,0.06,2425,Champions_League,CL
+2024-11-26,Young Boys,Atalanta,1,6,A,Manfredas Lukjančukas,0.0,0.0,10.12,17.1,2.25,6.1,14.5,10.3,14.75,23.9,3.0,1.9,0.0,0.1,2425,Champions_League,CL
+2024-11-27,Red Star,Stuttgart,5,1,H,Erik Lambrechts,0.0,0.0,11.62,17.25,3.75,5.38,9.62,11.38,21.25,22.0,1.62,1.62,0.0,0.0,2425,Champions_League,CL
+2024-11-27,Sturm Graz,Girona,1,0,H,Rohit Saggi,0.0,0.0,8.38,9.62,3.0,3.5,13.12,14.5,12.62,16.12,2.12,3.12,0.12,0.12,2425,Champions_League,CL
+2024-11-27,Aston Villa,Juventus,0,0,D,Jesús Gil,0.0,0.0,12.67,11.5,5.08,3.7,10.25,11.3,11.42,18.7,1.58,1.5,0.0,0.2,2425,Champions_League,CL
+2024-11-27,Liverpool,Real Madrid,2,0,H,François Letexier,0.0,0.0,14.3,14.93,5.7,5.93,10.7,11.57,16.6,16.71,1.9,2.43,0.1,0.07,2425,Champions_League,CL
+2024-11-27,Celtic,Club Brugge,1,1,D,Georgi Kabakov,0.0,0.0,9.4,10.08,3.7,3.58,9.2,8.67,13.8,10.08,1.0,1.58,0.1,0.17,2425,Champions_League,CL
+2024-11-27,PSV,Shakhtar Donetsk,3,2,H,Urs Schnyder,0.0,0.0,17.17,9.25,6.33,2.5,10.58,10.62,20.42,11.38,2.0,1.62,0.08,0.12,2425,Champions_League,CL
+2024-11-27,Bologna,Lille,1,2,A,Michael Oliver,0.0,0.0,11.75,9.3,3.38,3.6,14.38,10.1,17.0,9.5,3.5,2.3,0.0,0.2,2425,Champions_League,CL
+2024-11-27,Dinamo Zagreb,Dortmund,0,3,A,Clément Turpin,0.0,0.0,9.38,13.64,3.0,5.36,10.5,12.29,13.25,18.0,2.38,1.71,0.0,0.0,2425,Champions_League,CL
+2024-11-27,Monaco,Benfica,2,3,A,Rade Obrenović,0.0,0.0,11.8,13.92,4.3,5.33,11.8,10.83,13.4,14.67,2.3,2.33,0.3,0.08,2425,Champions_League,CL
+2024-12-10,Dinamo Zagreb,Celtic,0,0,D,Felix Zwayer,0.0,0.0,9.38,9.4,3.0,3.7,10.5,9.2,13.25,13.8,2.38,1.0,0.0,0.1,2425,Champions_League,CL
+2024-12-10,Girona,Liverpool,0,1,A,Benoît Bastien,0.0,0.0,9.62,14.3,3.5,5.7,14.5,10.7,16.12,16.6,3.12,1.9,0.12,0.1,2425,Champions_League,CL
+2024-12-10,Leverkusen,Inter,1,0,H,Slavko Vinčič,0.0,0.0,15.1,11.67,5.5,3.8,11.8,9.53,17.8,13.13,2.3,2.2,0.2,0.0,2425,Champions_League,CL
+2024-12-10,Brest,PSV,1,0,H,Jose Maria Sánchez,0.0,0.0,13.1,17.17,3.8,6.33,11.3,10.58,16.5,20.42,2.0,2.0,0.0,0.08,2425,Champions_League,CL
+2024-12-10,Club Brugge,Sporting CP,2,1,H,Anthony Taylor,0.0,0.0,10.08,12.2,3.58,4.1,8.67,10.4,10.08,11.5,1.58,1.7,0.17,0.0,2425,Champions_League,CL
+2024-12-10,RB Salzburg,Paris Saint-Germain,0,3,A,Michael Oliver,0.0,0.0,9.25,18.76,2.75,6.76,11.5,9.12,13.38,14.88,2.0,1.12,0.12,0.06,2425,Champions_League,CL
+2024-12-10,RB Leipzig,Aston Villa,2,3,A,Maurizio Mariani,0.0,0.0,12.75,12.67,4.5,5.08,11.12,10.25,16.25,11.42,1.88,1.58,0.0,0.0,2425,Champions_League,CL
+2024-12-10,Atalanta,Real Madrid,2,3,A,Szymon Marciniak,0.0,0.0,17.1,14.93,6.1,5.93,10.3,11.57,23.9,16.71,1.9,2.43,0.1,0.07,2425,Champions_League,CL
+2024-12-10,Shakhtar Donetsk,Bayern Munich,1,5,A,Halil Umut Meler,0.0,0.0,9.25,20.14,2.5,7.21,10.62,9.64,11.38,22.86,1.62,1.57,0.12,0.0,2425,Champions_League,CL
+2024-12-11,Lille,Sturm Graz,3,2,H,Georgi Kabakov,0.0,0.0,9.3,8.38,3.6,3.0,10.1,13.12,9.5,12.62,2.3,2.12,0.2,0.12,2425,Champions_League,CL
+2024-12-11,Atlético Madrid,Slovan Bratislava,3,1,H,Manfredas Lukjančukas,0.0,0.0,12.3,7.62,4.8,2.25,10.2,9.0,17.1,9.5,1.8,2.12,0.1,0.12,2425,Champions_League,CL
+2024-12-11,Arsenal,Monaco,3,0,H,Davide Massa,0.0,0.0,12.79,11.8,5.43,4.3,11.14,11.8,16.5,13.4,1.93,2.3,0.0,0.3,2425,Champions_League,CL
+2024-12-11,Benfica,Bologna,0,0,D,Radu Petrescu,0.0,0.0,13.92,11.75,5.33,3.38,10.83,14.38,14.67,17.0,2.33,3.5,0.08,0.0,2425,Champions_League,CL
+2024-12-11,Milan,Red Star,2,1,H,Jesús Gil,0.0,0.0,14.9,11.62,5.9,3.75,10.7,9.62,13.2,21.25,2.8,1.62,0.2,0.0,2425,Champions_League,CL
+2024-12-11,Juventus,Manchester City,2,0,H,Clément Turpin,0.0,0.0,11.5,16.7,3.7,6.2,11.3,7.9,18.7,19.4,1.5,1.1,0.2,0.0,2425,Champions_League,CL
+2024-12-11,Stuttgart,Young Boys,5,1,H,Giorgi Kruashvili,0.0,0.0,17.25,10.12,5.38,2.25,11.38,14.5,22.0,14.75,1.62,3.0,0.0,0.0,2425,Champions_League,CL
+2024-12-11,Dortmund,Barcelona,2,3,A,François Letexier,0.0,0.0,13.64,15.79,5.36,6.64,12.29,8.93,18.0,15.21,1.71,1.0,0.0,0.14,2425,Champions_League,CL
+2024-12-11,Feyenoord,Sparta Prague,4,2,H,Tobias Stieler,0.0,0.0,10.08,9.38,3.67,2.62,10.0,10.12,11.58,9.62,1.5,1.62,0.17,0.0,2425,Champions_League,CL
+2025-01-21,Atalanta,Sturm Graz,5,0,H,Donatas Rumšas,0.0,0.0,17.1,8.38,6.1,3.0,10.3,13.12,23.9,12.62,1.9,2.12,0.1,0.12,2425,Champions_League,CL
+2025-01-21,Monaco,Aston Villa,1,0,H,Slavko Vinčič,0.0,0.0,11.8,12.67,4.3,5.08,11.8,10.25,13.4,11.42,2.3,1.58,0.3,0.0,2425,Champions_League,CL
+2025-01-21,Liverpool,Lille,2,1,H,Felix Zwayer,0.0,0.0,14.3,9.3,5.7,3.6,10.7,10.1,16.6,9.5,1.9,2.3,0.1,0.2,2425,Champions_League,CL
+2025-01-21,Benfica,Barcelona,4,5,A,Danny Makkelie,0.0,0.0,13.92,15.79,5.33,6.64,10.83,8.93,14.67,15.21,2.33,1.0,0.08,0.14,2425,Champions_League,CL
+2025-01-21,Bologna,Dortmund,2,1,H,Serdar Gözübüyük,0.0,0.0,11.75,13.64,3.38,5.36,14.38,12.29,17.0,18.0,3.5,1.71,0.0,0.0,2425,Champions_League,CL
+2025-01-21,Club Brugge,Juventus,0,0,D,Benoît Bastien,0.0,0.0,10.08,11.5,3.58,3.7,8.67,11.3,10.08,18.7,1.58,1.5,0.17,0.2,2425,Champions_League,CL
+2025-01-21,Red Star,PSV,2,3,A,István Kovács,0.0,0.0,11.62,17.17,3.75,6.33,9.62,10.58,21.25,20.42,1.62,2.0,0.0,0.08,2425,Champions_League,CL
+2025-01-21,Slovan Bratislava,Stuttgart,1,3,A,Chris Kavanagh,0.0,0.0,7.62,17.25,2.25,5.38,9.0,11.38,9.5,22.0,2.12,1.62,0.12,0.0,2425,Champions_League,CL
+2025-01-21,Atlético Madrid,Leverkusen,2,1,H,Davide Massa,0.0,0.0,12.3,15.1,4.8,5.5,10.2,11.8,17.1,17.8,1.8,2.3,0.1,0.2,2425,Champions_League,CL
+2025-01-22,RB Leipzig,Sporting CP,2,1,H,Manfredas Lukjančukas,0.0,0.0,12.75,12.2,4.5,4.1,11.12,10.4,16.25,11.5,1.88,1.7,0.0,0.0,2425,Champions_League,CL
+2025-01-22,Shakhtar Donetsk,Brest,2,0,H,Sandro Schärer,0.0,0.0,9.25,13.1,2.5,3.8,10.62,11.3,11.38,16.5,1.62,2.0,0.12,0.0,2425,Champions_League,CL
+2025-01-22,Arsenal,Dinamo Zagreb,3,0,H,Daniel Siebert,0.0,0.0,12.79,9.38,5.43,3.0,11.14,10.5,16.5,13.25,1.93,2.38,0.0,0.0,2425,Champions_League,CL
+2025-01-22,Celtic,Young Boys,1,0,H,Rohit Saggi,0.0,0.0,9.4,10.12,3.7,2.25,9.2,14.5,13.8,14.75,1.0,3.0,0.1,0.0,2425,Champions_League,CL
+2025-01-22,Real Madrid,RB Salzburg,5,1,H,Glenn Nyberg,0.0,0.0,14.93,9.25,5.93,2.75,11.57,11.5,16.71,13.38,2.43,2.0,0.07,0.12,2425,Champions_League,CL
+2025-01-22,Milan,Girona,1,0,H,Tobias Stieler,0.0,0.0,14.9,9.62,5.9,3.5,10.7,14.5,13.2,16.12,2.8,3.12,0.2,0.12,2425,Champions_League,CL
+2025-01-22,Paris Saint-Germain,Manchester City,4,2,H,Szymon Marciniak,0.0,0.0,18.76,16.7,6.76,6.2,9.12,7.9,14.88,19.4,1.12,1.1,0.06,0.0,2425,Champions_League,CL
+2025-01-22,Sparta Prague,Inter,0,1,A,Alejandro Hernández,0.0,0.0,9.38,11.67,2.62,3.8,10.12,9.53,9.62,13.13,1.62,2.2,0.0,0.0,2425,Champions_League,CL
+2025-01-22,Feyenoord,Bayern Munich,3,0,H,François Letexier,0.0,0.0,10.08,20.14,3.67,7.21,10.0,9.64,11.58,22.86,1.5,1.57,0.17,0.0,2425,Champions_League,CL
+2025-01-29,Manchester City,Club Brugge,3,1,H,Jose Maria Sánchez,0.0,0.0,16.7,10.08,6.2,3.58,7.9,8.67,19.4,10.08,1.1,1.58,0.0,0.17,2425,Champions_League,CL
+2025-01-29,Aston Villa,Celtic,4,2,H,Clément Turpin,0.0,0.0,12.67,9.4,5.08,3.7,10.25,9.2,11.42,13.8,1.58,1.0,0.0,0.1,2425,Champions_League,CL
+2025-01-29,Sporting CP,Bologna,1,1,D,Benoît Bastien,0.0,0.0,12.2,11.75,4.1,3.38,10.4,14.38,11.5,17.0,1.7,3.5,0.0,0.0,2425,Champions_League,CL
+2025-01-29,Bayern Munich,Slovan Bratislava,3,1,H,João Pinheiro,0.0,0.0,20.14,7.62,7.21,2.25,9.64,9.0,22.86,9.5,1.57,2.12,0.0,0.12,2425,Champions_League,CL
+2025-01-29,Juventus,Benfica,0,2,A,István Kovács,0.0,0.0,11.5,13.92,3.7,5.33,11.3,10.83,18.7,14.67,1.5,2.33,0.2,0.08,2425,Champions_League,CL
+2025-01-29,Barcelona,Atalanta,2,2,D,Michael Oliver,0.0,0.0,15.79,17.1,6.64,6.1,8.93,10.3,15.21,23.9,1.0,1.9,0.14,0.1,2425,Champions_League,CL
+2025-01-29,Dortmund,Shakhtar Donetsk,3,1,H,Glenn Nyberg,0.0,0.0,13.64,9.25,5.36,2.5,12.29,10.62,18.0,11.38,1.71,1.62,0.0,0.12,2425,Champions_League,CL
+2025-01-29,Brest,Real Madrid,0,3,A,Espen Eskås,0.0,0.0,13.1,14.93,3.8,5.93,11.3,11.57,16.5,16.71,2.0,2.43,0.0,0.07,2425,Champions_League,CL
+2025-01-29,PSV,Liverpool,3,2,H,Tobias Stieler,0.0,0.0,17.17,14.3,6.33,5.7,10.58,10.7,20.42,16.6,2.0,1.9,0.08,0.1,2425,Champions_League,CL
+2025-01-29,Inter,Monaco,3,0,H,Irfan Peljto,0.0,0.0,11.67,11.8,3.8,4.3,9.53,11.8,13.13,13.4,2.2,2.3,0.0,0.3,2425,Champions_League,CL
+2025-01-29,Leverkusen,Sparta Prague,2,0,H,Georgi Kabakov,0.0,0.0,15.1,9.38,5.5,2.62,11.8,10.12,17.8,9.62,2.3,1.62,0.2,0.0,2425,Champions_League,CL
+2025-01-29,RB Salzburg,Atlético Madrid,1,4,A,Anthony Taylor,0.0,0.0,9.25,12.3,2.75,4.8,11.5,10.2,13.38,17.1,2.0,1.8,0.12,0.1,2425,Champions_League,CL
+2025-01-29,Stuttgart,Paris Saint-Germain,1,4,A,Davide Massa,0.0,0.0,17.25,18.76,5.38,6.76,11.38,9.12,22.0,14.88,1.62,1.12,0.0,0.06,2425,Champions_League,CL
+2025-01-29,Lille,Feyenoord,6,1,H,Slavko Vinčič,0.0,0.0,9.3,10.08,3.6,3.67,10.1,10.0,9.5,11.58,2.3,1.5,0.2,0.17,2425,Champions_League,CL
+2025-01-29,Sturm Graz,RB Leipzig,1,0,H,Mykola Balakin,0.0,0.0,8.38,12.75,3.0,4.5,13.12,11.12,12.62,16.25,2.12,1.88,0.12,0.0,2425,Champions_League,CL
+2025-01-29,Young Boys,Red Star,0,1,A,Halil Umut Meler,0.0,0.0,10.12,11.62,2.25,3.75,14.5,9.62,14.75,21.25,3.0,1.62,0.0,0.0,2425,Champions_League,CL
+2025-01-29,Girona,Arsenal,1,2,A,Maurizio Mariani,0.0,0.0,9.62,12.79,3.5,5.43,14.5,11.14,16.12,16.5,3.12,1.93,0.12,0.0,2425,Champions_League,CL
+2025-01-29,Dinamo Zagreb,Milan,2,1,H,François Letexier,0.0,0.0,9.38,14.9,3.0,5.9,10.5,10.7,13.25,13.2,2.38,2.8,0.0,0.2,2425,Champions_League,CL
+2025-02-11,Brest,Paris Saint-Germain,0,3,A,Irfan Peljto,0.0,0.0,13.1,18.76,3.8,6.76,11.3,9.12,16.5,14.88,2.0,1.12,0.0,0.06,2425,Champions_League,CL
+2025-02-11,Sporting CP,Dortmund,0,3,A,Espen Eskås,0.0,0.0,12.2,13.64,4.1,5.36,10.4,12.29,11.5,18.0,1.7,1.71,0.0,0.0,2425,Champions_League,CL
+2025-02-11,Manchester City,Real Madrid,2,3,A,Clément Turpin,0.0,0.0,16.7,14.93,6.2,5.93,7.9,11.57,19.4,16.71,1.1,2.43,0.0,0.07,2425,Champions_League,CL
+2025-02-11,Juventus,PSV,2,1,H,Daniel Siebert,0.0,0.0,11.5,17.17,3.7,6.33,11.3,10.58,18.7,20.42,1.5,2.0,0.2,0.08,2425,Champions_League,CL
+2025-02-12,Club Brugge,Atalanta,2,1,H,Halil Umut Meler,0.0,0.0,10.08,17.1,3.58,6.1,8.67,10.3,10.08,23.9,1.58,1.9,0.17,0.1,2425,Champions_League,CL
+2025-02-12,Celtic,Bayern Munich,1,2,A,Jesús Gil,0.0,0.0,9.4,20.14,3.7,7.21,9.2,9.64,13.8,22.86,1.0,1.57,0.1,0.0,2425,Champions_League,CL
+2025-02-12,Monaco,Benfica,0,1,A,Maurizio Mariani,0.0,0.0,11.8,13.92,4.3,5.33,11.8,10.83,13.4,14.67,2.3,2.33,0.3,0.08,2425,Champions_League,CL
+2025-02-12,Feyenoord,Milan,1,0,H,Jose Maria Sánchez,0.0,0.0,10.08,14.9,3.67,5.9,10.0,10.7,11.58,13.2,1.5,2.8,0.17,0.2,2425,Champions_League,CL
+2025-02-18,Milan,Feyenoord,1,1,D,Szymon Marciniak,0.0,0.0,14.9,10.08,5.9,3.67,10.7,10.0,13.2,11.58,2.8,1.5,0.2,0.17,2425,Champions_League,CL
+2025-02-18,Benfica,Monaco,3,3,D,Glenn Nyberg,0.0,0.0,13.92,11.8,5.33,4.3,10.83,11.8,14.67,13.4,2.33,2.3,0.08,0.3,2425,Champions_League,CL
+2025-02-18,Atalanta,Club Brugge,1,3,A,Felix Zwayer,0.0,0.0,17.1,10.08,6.1,3.58,10.3,8.67,23.9,10.08,1.9,1.58,0.1,0.17,2425,Champions_League,CL
+2025-02-18,Bayern Munich,Celtic,1,1,D,Benoît Bastien,0.0,0.0,20.14,9.4,7.21,3.7,9.64,9.2,22.86,13.8,1.57,1.0,0.0,0.1,2425,Champions_League,CL
+2025-02-19,Dortmund,Sporting CP,0,0,D,Davide Massa,0.0,0.0,13.64,12.2,5.36,4.1,12.29,10.4,18.0,11.5,1.71,1.7,0.0,0.0,2425,Champions_League,CL
+2025-02-19,PSV,Juventus,3,1,H,Slavko Vinčič,0.0,0.0,17.17,11.5,6.33,3.7,10.58,11.3,20.42,18.7,2.0,1.5,0.08,0.2,2425,Champions_League,CL
+2025-02-19,Real Madrid,Manchester City,3,1,H,István Kovács,0.0,0.0,14.93,16.7,5.93,6.2,11.57,7.9,16.71,19.4,2.43,1.1,0.07,0.0,2425,Champions_League,CL
+2025-02-19,Paris Saint-Germain,Brest,7,0,H,Michael Oliver,0.0,0.0,18.76,13.1,6.76,3.8,9.12,11.3,14.88,16.5,1.12,2.0,0.06,0.0,2425,Champions_League,CL
+2025-03-04,Club Brugge,Aston Villa,1,3,A,João Pinheiro,0.0,0.0,10.08,12.67,3.58,5.08,8.67,10.25,10.08,11.42,1.58,1.58,0.17,0.0,2425,Champions_League,CL
+2025-03-04,PSV,Arsenal,1,7,A,Jesús Gil,0.0,0.0,17.17,12.79,6.33,5.43,10.58,11.14,20.42,16.5,2.0,1.93,0.08,0.0,2425,Champions_League,CL
+2025-03-04,Dortmund,Lille,1,1,D,Jose Maria Sánchez,0.0,0.0,13.64,9.3,5.36,3.6,12.29,10.1,18.0,9.5,1.71,2.3,0.0,0.2,2425,Champions_League,CL
+2025-03-04,Real Madrid,Atlético Madrid,2,1,H,Clément Turpin,0.0,0.0,14.93,12.3,5.93,4.8,11.57,10.2,16.71,17.1,2.43,1.8,0.07,0.1,2425,Champions_League,CL
+2025-03-05,Feyenoord,Inter,0,2,A,Espen Eskås,0.0,0.0,10.08,11.67,3.67,3.8,10.0,9.53,11.58,13.13,1.5,2.2,0.17,0.0,2425,Champions_League,CL
+2025-03-05,Benfica,Barcelona,0,1,A,Felix Zwayer,0.0,0.0,13.92,15.79,5.33,6.64,10.83,8.93,14.67,15.21,2.33,1.0,0.08,0.14,2425,Champions_League,CL
+2025-03-05,Bayern Munich,Leverkusen,3,0,H,Michael Oliver,0.0,0.0,20.14,15.1,7.21,5.5,9.64,11.8,22.86,17.8,1.57,2.3,0.0,0.2,2425,Champions_League,CL
+2025-03-05,Paris Saint-Germain,Liverpool,0,1,A,Davide Massa,0.0,0.0,18.76,14.3,6.76,5.7,9.12,10.7,14.88,16.6,1.12,1.9,0.06,0.1,2425,Champions_League,CL
+2025-03-11,Barcelona,Benfica,3,1,H,François Letexier,0.0,0.0,15.79,13.92,6.64,5.33,8.93,10.83,15.21,14.67,1.0,2.33,0.14,0.08,2425,Champions_League,CL
+2025-03-11,Leverkusen,Bayern Munich,0,2,A,Slavko Vinčič,0.0,0.0,15.1,20.14,5.5,7.21,11.8,9.64,17.8,22.86,2.3,1.57,0.2,0.0,2425,Champions_League,CL
+2025-03-11,Inter,Feyenoord,2,1,H,Ivan Kružliak,0.0,0.0,11.67,10.08,3.8,3.67,9.53,10.0,13.13,11.58,2.2,1.5,0.0,0.17,2425,Champions_League,CL
+2025-03-12,Lille,Dortmund,1,2,A,Sandro Schärer,0.0,0.0,9.3,13.64,3.6,5.36,10.1,12.29,9.5,18.0,2.3,1.71,0.2,0.0,2425,Champions_League,CL
+2025-03-12,Arsenal,PSV,2,2,D,Rade Obrenović,0.0,0.0,12.79,17.17,5.43,6.33,11.14,10.58,16.5,20.42,1.93,2.0,0.0,0.08,2425,Champions_League,CL
+2025-03-12,Aston Villa,Club Brugge,3,0,H,Daniel Siebert,0.0,0.0,12.67,10.08,5.08,3.58,10.25,8.67,11.42,10.08,1.58,1.58,0.0,0.17,2425,Champions_League,CL
+2025-04-08,Arsenal,Real Madrid,3,0,H,Irfan Peljto,0.0,0.0,12.79,14.93,5.43,5.93,11.14,11.57,16.5,16.71,1.93,2.43,0.0,0.07,2425,Champions_League,CL
+2025-04-08,Bayern Munich,Inter,1,2,A,Sandro Schärer,0.0,0.0,20.14,11.67,7.21,3.8,9.64,9.53,22.86,13.13,1.57,2.2,0.0,0.0,2425,Champions_League,CL
+2025-04-09,Barcelona,Dortmund,4,0,H,Espen Eskås,0.0,0.0,15.79,13.64,6.64,5.36,8.93,12.29,15.21,18.0,1.0,1.71,0.14,0.0,2425,Champions_League,CL
+2025-04-09,Paris Saint-Germain,Aston Villa,3,1,H,Maurizio Mariani,0.0,0.0,18.76,12.67,6.76,5.08,9.12,10.25,14.88,11.42,1.12,1.58,0.06,0.0,2425,Champions_League,CL
+2025-04-15,Aston Villa,Paris Saint-Germain,3,2,H,Jose Maria Sánchez,0.0,0.0,12.67,18.76,5.08,6.76,10.25,9.12,11.42,14.88,1.58,1.12,0.0,0.06,2425,Champions_League,CL
+2025-04-15,Dortmund,Barcelona,3,1,H,Maurizio Mariani,0.0,0.0,13.64,15.79,5.36,6.64,12.29,8.93,18.0,15.21,1.71,1.0,0.0,0.14,2425,Champions_League,CL
+2025-04-16,Inter,Bayern Munich,2,2,D,Slavko Vinčič,0.0,0.0,11.67,20.14,3.8,7.21,9.53,9.64,13.13,22.86,2.2,1.57,0.0,0.0,2425,Champions_League,CL
+2025-04-16,Real Madrid,Arsenal,1,2,A,François Letexier,0.0,0.0,14.93,12.79,5.93,5.43,11.57,11.14,16.71,16.5,2.43,1.93,0.07,0.0,2425,Champions_League,CL
+2025-04-29,Arsenal,Paris Saint-Germain,0,1,A,Slavko Vinčič,0.0,0.0,12.79,18.76,5.43,6.76,11.14,9.12,16.5,14.88,1.93,1.12,0.0,0.06,2425,Champions_League,CL
+2025-04-30,Barcelona,Inter,3,3,D,Clément Turpin,0.0,0.0,15.79,11.67,6.64,3.8,8.93,9.53,15.21,13.13,1.0,2.2,0.14,0.0,2425,Champions_League,CL
+2025-05-06,Inter,Barcelona,4,3,H,Szymon Marciniak,0.0,0.0,11.67,15.79,3.8,6.64,9.53,8.93,13.13,15.21,2.2,1.0,0.0,0.14,2425,Champions_League,CL
+2025-05-07,Paris Saint-Germain,Arsenal,2,1,H,Felix Zwayer,0.0,0.0,18.76,12.79,6.76,5.43,9.12,11.14,14.88,16.5,1.12,1.93,0.06,0.0,2425,Champions_League,CL
+2025-05-31,Paris Saint-Germain,Inter,5,0,H,István Kovács,0.0,0.0,18.76,11.67,6.76,3.8,9.12,9.53,14.88,13.13,1.12,2.2,0.06,0.0,2425,Champions_League,CL

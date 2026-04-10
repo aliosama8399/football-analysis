@@ -99,51 +99,46 @@ class FootballDataProcessor:
         return df
     
     def load_understat_data(self) -> pd.DataFrame:
-        """Load existing Understat xG data"""
+        """Load newly scraped Understat xG data"""
         print("Loading Understat xG data...")
         
-        # Try existing file first
-        existing_files = ['understat_per_game.csv', 'understat.com.csv']
-        
-        for filename in existing_files:
-            path = Path(filename)
-            if path.exists():
-                df = pd.read_csv(path)
-                print(f"  ✓ Loaded {len(df)} records from {filename}")
-                return df
-        
-        # Try raw directory
         raw_path = self.raw_dir / "understat_xg_data.csv"
         if raw_path.exists():
             df = pd.read_csv(raw_path)
             print(f"  ✓ Loaded {len(df)} matches from {raw_path}")
             return df
         
-        print("  ✗ No Understat data found")
+        print("  ✗ No Understat data found. Run data/collectors/understat_scraper.py first.")
         return pd.DataFrame()
     
     def prepare_understat_match_data(self, understat_df: pd.DataFrame) -> pd.DataFrame:
-        """Prepare Understat data for matching with football-data.co.uk"""
+        """Prepare Understat match data for merging with football-data.co.uk"""
         if understat_df.empty:
             return pd.DataFrame()
         
         print("Processing Understat data...")
         
-        # Filter for relevant leagues (EPL = Premier League, La_liga = La Liga)
-        target_leagues = ['EPL', 'La_liga', 'La Liga', 'epl', 'la_liga', 'Bundesliga', 'Serie_A', 'Ligue_1']
-        df = understat_df[understat_df['league'].isin(target_leagues)].copy()
-        
-        # Filter for recent years (last 3 seasons)
-        if 'year' in df.columns:
-            recent_years = [2022, 2023, 2024, 2025]
-            df = df[df['year'].isin(recent_years)]
-        
-        print(f"  ✓ Filtered to {len(df)} relevant records")
+        # Avoid missing key errors by ensuring lowercase conversion or matching expected scraper output
+        df = understat_df.copy()
         
         # Standardize team names
-        df['team'] = df['team'].apply(self.standardize_team_name)
-        
-        return df
+        if 'home_team' in df.columns and 'away_team' in df.columns:
+            df['HomeTeam'] = df['home_team'].apply(self.standardize_team_name)
+            df['AwayTeam'] = df['away_team'].apply(self.standardize_team_name)
+            
+            # Format dates to dt.date for reliable merging
+            if 'date' in df.columns:
+                df['Date_only'] = pd.to_datetime(df['date'], errors='coerce').dt.date
+            
+            # Extract just the critical metrics mapping
+            if 'home_xg' in df.columns and 'away_xg' in df.columns:
+                xg_data = df[['Date_only', 'HomeTeam', 'AwayTeam', 'home_xg', 'away_xg']].copy()
+                xg_data = xg_data.rename(columns={'home_xg': 'Home_xG', 'away_xg': 'Away_xG'})
+                print(f"  ✓ Processed Understat for matching: {len(xg_data)} matches")
+                return xg_data
+                
+        print("  ✗ Warning: Understat dataset did not possess expected schema.")
+        return pd.DataFrame()
     
     def calculate_team_form(self, df: pd.DataFrame, team_col: str, date_col: str, 
                            result_col: str, n_matches: int = 5) -> pd.DataFrame:
@@ -446,8 +441,17 @@ class FootballDataProcessor:
             print("\n✗ No data to process!")
             return pd.DataFrame()
         
-        # Process Understat data
+        # Process and tightly merge Understat data BEFORE calculating form features
         processed_understat = self.prepare_understat_match_data(understat_df)
+        if not processed_understat.empty:
+            fduk_df['Date_only'] = pd.to_datetime(fduk_df['Date'], errors='coerce').dt.date
+            # Pre-merge row count
+            start_len = len(fduk_df)
+            fduk_df = fduk_df.merge(processed_understat, on=['Date_only', 'HomeTeam', 'AwayTeam'], how='left')
+            fduk_df = fduk_df.drop(columns=['Date_only'], errors='ignore')
+            # Count how many matches actually found an xG match
+            xg_found = fduk_df['Home_xG'].notna().sum()
+            print(f"  ✓ Successfully merged xG values for {xg_found} out of {start_len} matches")
         
         # Calculate form features
         form_df = self.calculate_team_form(fduk_df, 'HomeTeam', 'Date', 'Result', n_matches=5)

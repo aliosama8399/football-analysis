@@ -123,8 +123,9 @@ class BaseLLMProvider(ABC):
         node_feats = json.dumps(gnn_explanation.get('top_node_features', {}), indent=2)
         hist_matches = json.dumps(gnn_explanation.get('top_influencing_matches', []), indent=2)
 
-        return f"""You are an elite football tactical analyst. You speak as one unified voice — never refer to yourself in the third person, never say "the AI predicts", "the model says", "our system", "the graph neural network", or any similar phrasing. You ARE the analyst; the prediction and the explanation are yours.
+        return f"""You are an elite football tactical analyst API. Focus on deeply analytical insights backed by the provided quantitative data.
 
+INPUT DATA:
 FIXTURE: {home} (Home) vs {away} (Away)
 PREDICTION: {pred}
 PROBABILITIES: Home Win {probs.get('H', 0):.1%} | Draw {probs.get('D', 0):.1%} | Away Win {probs.get('A', 0):.1%}
@@ -135,25 +136,23 @@ KEY STATISTICAL INDICATORS (recent 5-match rolling form):
 KEY HISTORICAL CONTEXT (influential recent encounters):
 {hist_matches}
 
-Write a 4-paragraph tactical analysis:
+INSTRUCTIONS:
+You must output ONLY valid JSON. Do not include markdown codeblocks or any conversational text. Adhere strictly to this schema:
+{{
+  "prediction_verdict": "Clear, professional thesis stating why the predicted outcome is expected (1-2 sentences)",
+  "confidence_rating": "High, Medium, or Low based on the probability",
+  "home_team_analysis": {{
+    "strengths": ["list 2-3 specific strengths based on stats"],
+    "weaknesses": ["list 1-2 specific weaknesses"]
+  }},
+  "away_team_analysis": {{
+    "strengths": ["list 2-3 specific strengths based on stats"],
+    "weaknesses": ["list 1-2 specific weaknesses"]
+  }},
+  "tactical_matchup_summary": "A concise paragraph describing how the teams' styles and form will interact."
+}}"""
 
-PARAGRAPH 1 — HEADLINE & VERDICT:
-State your prediction clearly and why. Frame it as YOUR professional assessment, not a model output.
 
-PARAGRAPH 2 — STRENGTHS & WEAKNESSES OF {home}:
-Analyze {home}'s recent form using the stats above (xG, shots, defensive record, discipline). Where are they strong? Where are they vulnerable? Be specific — translate stat names like "xG_5" into plain football language (e.g. "expected goals over their last 5 matches").
-
-PARAGRAPH 3 — STRENGTHS & WEAKNESSES OF {away}:
-Same analysis for {away}. Compare and contrast with {home} where relevant.
-
-PARAGRAPH 4 — TACTICAL SYNTHESIS & WHAT COULD CHANGE THE OUTCOME:
-Tie it all together. How do the two teams' profiles interact? What historical matchups or patterns inform this conclusion? Finally, explain what tactical adjustments or scenarios could realistically flip the result (e.g. "If {away} can exploit the high line...").
-
-RULES:
-- NEVER say "the model", "the AI", "our system", "the algorithm", "GNNExplainer", "graph structure", "node features", "edge features", or any technical term. You are not explaining a model — you are delivering your own expert analysis.
-- DO NOT just read off numbers. Synthesize them into football meaning.
-- Keep the tone professional, confident, and insightful — like a pundit writing for The Athletic.
-"""
 
 
 # ── Concrete providers ────────────────────────────────────────────────────────
@@ -210,9 +209,10 @@ class OpenAIProvider(BaseLLMProvider):
         response = self._client.chat.completions.create(
             model=self.model_name,
             messages=[
-                {"role": "system", "content": "You are a professional football tactical analyst."},
+                {"role": "system", "content": "You are a professional football tactical analyst API designed to format inputs as JSON."},
                 {"role": "user",   "content": prompt},
             ],
+            response_format={"type": "json_object"},
             temperature=self.temperature,
             max_tokens=self.max_tokens,
             timeout=self.timeout,
@@ -242,6 +242,7 @@ class GeminiProvider(BaseLLMProvider):
                 generation_config={
                     "temperature": self.temperature,
                     "max_output_tokens": self.max_tokens,
+                    "response_mime_type": "application/json",
                 },
             )
             self._sdk = "generativeai"
@@ -259,9 +260,14 @@ class GeminiProvider(BaseLLMProvider):
 
     def _call_api(self, prompt: str) -> str:
         if self._sdk == "generativeai":
-            return self._client.generate_content(prompt).text
+            response = self._client.generate_content(prompt)
+            return response.text
+            return response.text
+        # Fallback for the newer google.genai SDK
         response = self._client.models.generate_content(
-            model=self.model_name, contents=prompt
+            model=self.model_name,
+            contents=prompt,
+            config={"response_mime_type": "application/json", "temperature": self.temperature, "max_output_tokens": self.max_tokens}
         )
         return response.text
 

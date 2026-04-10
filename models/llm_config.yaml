@@ -24,8 +24,8 @@ providers:
   ollama:
     # No API key needed — Ollama runs locally
     api_url: "http://localhost:11434/api/generate"
-    default_model: "gemma3:1b"
-    timeout: 180
+    default_model: "glm-4.6:cloud"
+    timeout: 300
     # Other models you can drop in:
     #   llama3:8b | llama3:70b | mistral | phi3 | gemma2
 
@@ -37,7 +37,7 @@ providers:
     #   gpt-4o | gpt-4-turbo | gpt-3.5-turbo | o1-mini
 
   gemini:
-    api_key: ""           # Leave empty → reads GEMINI_API_KEY env var
+    api_key: "AIzaSyCq9YDGxiccWWJWPJw2nZrg-iuorW2GoTI"           # Leave empty → reads GEMINI_API_KEY env var
     default_model: "gemini-2.0-flash"
     timeout: 60
     # Other models you can drop in:
