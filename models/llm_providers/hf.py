@@ -5,13 +5,12 @@ Loads the full merged fine-tuned model from HuggingFace directly via
 AutoTokenizer + AutoModelForCausalLM (no PEFT / LoRA adapter needed).
 
 Model: aliosama8399/football-analysisN  (merged fine-tune of Qwen3-0.6B)
-
-Registered in llm_providers.py so the RAG system can call
-`get_llm_provider("huggingface")`.
 """
 
-import os
+from __future__ import annotations
+
 import logging
+import os
 from pathlib import Path
 
 logger = logging.getLogger(__name__)
@@ -23,7 +22,9 @@ class HuggingFaceProvider:
     Plugs into the existing LLM provider architecture.
     """
 
-    def __init__(self, model_id: str = None):
+    provider_name = "huggingface"
+
+    def __init__(self, model_id: str | None = None, **kwargs):
         cfg = self._load_hf_cfg()
 
         self.model_id       = model_id or cfg.get("model_id", "aliosama8399/football-analysisN")
@@ -44,11 +45,14 @@ class HuggingFaceProvider:
     @staticmethod
     def _load_hf_cfg() -> dict:
         import yaml
-        cfg_path = Path(__file__).parent / "llm_config.yaml"
+        cfg_path = Path(__file__).resolve().parent.parent / "llm_config.yaml"
         if not cfg_path.exists():
             return {}
-        with open(cfg_path) as f:
-            return yaml.safe_load(f).get("providers", {}).get("huggingface", {})
+        try:
+            with open(cfg_path, "r", encoding="utf-8") as f:
+                return yaml.safe_load(f).get("providers", {}).get("huggingface", {})
+        except Exception:
+            return {}
 
     # ── Lazy loading ──────────────────────────────────────────────────────────
     def _load(self):
@@ -73,12 +77,12 @@ class HuggingFaceProvider:
             trust_remote_code=True,
             token=self.hf_token,
         )
-        
+
         # Force move to CUDA if loaded on CPU but CUDA is available
         if torch.cuda.is_available() and next(self._model.parameters()).device.type == "cpu":
             logger.info("Forcing model to CUDA device...")
             self._model = self._model.to("cuda")
-            
+
         self._model.eval()
 
         self._loaded = True
