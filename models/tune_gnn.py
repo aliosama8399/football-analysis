@@ -409,15 +409,40 @@ def main():
         print(f"{'=' * 70}")
         
         start = time.time()
-        
+
+        # ── MLflow: one parent run per model tuning study ──────────────────
+        try:
+            from models.mlflow_config import setup_mlflow, log_graph_meta, safe_end_run
+            safe_end_run()
+            mlflow = setup_mlflow("football-gnn-tuning")
+        except Exception as e:
+            mlflow = None
+            print(f"  [mlflow] tracking disabled ({e})")
+
+        def _mlflow_trial_callback(study, trial):
+            if mlflow and trial.value is not None:
+                mlflow.log_metric("trial_accuracy", trial.value, step=trial.number)
+
+        callbacks = [_mlflow_trial_callback] if mlflow else None
+
         study = optuna.create_study(direction='maximize',
                                      sampler=optuna.samplers.TPESampler(seed=RANDOM_STATE))
+        if mlflow:
+            mlflow.start_run(run_name=f"tune-{name}")
+            log_graph_meta(graph_data)
+            mlflow.log_params({"model": name, "n_trials": N_TRIALS, "device": str(DEVICE)})
         study.optimize(lambda trial: obj_fn(trial, graph_data),
-                       n_trials=N_TRIALS, show_progress_bar=False)
-        
+                       n_trials=N_TRIALS, show_progress_bar=False,
+                       callbacks=callbacks)
+
         bp = study.best_params
         best_cv = study.best_value
         tune_time = time.time() - start
+        if mlflow:
+            mlflow.log_params({f"best.{k}": v for k, v in bp.items()})
+            mlflow.log_metric("best_cv_accuracy", float(best_cv))
+            mlflow.log_metric("tune_time_s", round(tune_time, 2))
+            print(f"  [mlflow] tuning logged to experiment 'football-gnn-tuning'")
         
         print(f"  Best trial accuracy: {best_cv:.4f} ({tune_time:.1f}s)")
         print(f"  Best params: {bp}")
@@ -468,6 +493,23 @@ def main():
         torch.save({'model_state': metrics['model_state'],
                     'model_name': name, 'best_params': bp}, model_path)
         print(f"  ✓ Saved to {model_path.name}")
+
+        if mlflow:
+            for k in ("accuracy", "f1_macro", "f1_weighted", "log_loss", "rps", "auc_macro"):
+                v = metrics.get(k)
+                if v is not None:
+                    mlflow.log_metric(f"best_test.{k}", float(v))
+            try:
+                mlflow.log_artifact(str(model_path))
+                run = mlflow.active_run()
+                if run:
+                    run_id = run.info.run_id
+                    reg_name = f"football-gnn-{name.lower().replace(' ', '-')}"
+                    mlflow.register_model(f"runs:/{run_id}/{model_path.name}", reg_name)
+            except Exception as e:
+                print(f"  [mlflow] artifact/register note: {e}")
+            finally:
+                mlflow.end_run()
         
         # ── Per-model plotting (5 PNGs) ──
         print(f"  → Saving per-model tuned reports to {per_model_dir}...")
@@ -556,6 +598,29 @@ def main():
         print(f"     AUC macro: {best['auc_macro']:.4f}")
     print(f"     Draw F1:   {best['f1_D']:.4f}")
     print(f"{'=' * 70}\n")
+
+    # ── MLflow tuned summary run ──
+    try:
+        from models.mlflow_config import setup_mlflow, safe_end_run
+        safe_end_run()
+        mlflow = setup_mlflow("football-gnn-tuning")
+        with mlflow.start_run(run_name="Tuned-Zoo-Summary"):
+            mlflow.set_tag("pipeline", "gnn-tuned-summary")
+            mlflow.log_param("best_model", str(best['model']))
+            mlflow.log_metrics({
+                "best_accuracy": float(best['accuracy']),
+                "best_f1_macro": float(best['f1_macro']),
+                "best_rps": float(best['rps']),
+            })
+            for p in (RESULTS_DIR / 'gnn_tuned_comparison.csv',
+                      RESULTS_DIR / 'gnn_tuned_vs_default.png',
+                      RESULTS_DIR / 'gnn_tuned_per_class_f1.png',
+                      RESULTS_DIR / 'gnn_tuned_master_summary.txt'):
+                if p.exists():
+                    mlflow.log_artifact(str(p))
+            print("  [mlflow] Tuned zoo summary run logged to 'football-gnn-tuning'")
+    except Exception as e:
+        print(f"  [mlflow] tuned summary logging note: {e}")
     
     print("✓ GNN tuning complete!")
     return df, all_results

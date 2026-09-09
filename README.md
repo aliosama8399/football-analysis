@@ -125,6 +125,32 @@ python models/tune_models.py
 python data/build_finetune_dataset.py
 ```
 
+#### Experiment Tracking (MLflow)
+
+GNN training and tuning runs are logged to **MLflow** with per-model params, per-epoch loss curves, final metrics, and the produced `.pt` artifact attached to each run.
+
+```powershell
+# BEFORE any training — show experiments/models/dataset in the UI immediately
+uv run python models/mlflow_bootstrap.py              # local ./mlruns
+# or target the docker server:
+# $env:MLFLOW_TRACKING_URI="http://localhost:5000"; uv run python models/mlflow_bootstrap.py
+
+# Local mode (default) — runs go to ./mlruns (gitignored)
+python models/train_gnn.py
+python models/tune_gnn.py
+mlflow ui   # open http://localhost:5000
+
+# Or point at the Docker-hosted server (docker compose up mlflow)
+$env:MLFLOW_TRACKING_URI = "http://localhost:5000"
+python models/train_gnn.py
+```
+
+| Experiment | Script | What is logged |
+|---|---|---|
+| `football-gnn-training` | `models/train_gnn.py` | model/arch, hyperparameters, per-epoch `train_loss`/`val_loss`, final `accuracy`/`f1_macro`/`log_loss`/`rps`/`auc_macro`, trained `.pt` artifact |
+| `football-gnn-tuning` | `models/tune_gnn.py` | per-trial `trial_accuracy` curve per model, best params (`best.*`), tuned model artifact |
+
+
 ### Stage 4 — Best-11 Feature (ratings, H2H, lineups)
 
 No training here — team-share ratings are computed on the fly from `processed_matches.csv` (`data/team_totals.py`) + the squad caches. After Stage 1+2 you can smoke-test via the API (the old `data/best11.py` CLI was removed; use the REST/GraphQL entry points):
@@ -258,6 +284,35 @@ GNN → torch checkpoint. Env knobs: `FOOTBALL_ONNX_EP` (cuda/cpu),
 `FOOTBALL_ONNX_MAX_NEW_TOKENS`, and the legacy `FOOTBALL_ONNX_LLM=0` /
 `FOOTBALL_ONNX=0` switches.
 
+### Stage 5c — TensorRT-LLM (optional, fastest GPU path)
+
+One script drives everything, in WSL or PowerShell, with **the pinned image** and
+auto `/mnt/...` path conversion:
+
+```bash
+# Phase 1 — spike (GPU visible? sm75 OK?)
+python models/export_trtllm.py --verify
+
+# Phase 2 — build the fp16 engine → models/export/trtllm/engine
+python models/export_trtllm.py
+
+# Phase 3 — sidecar + serve (WSL/PowerShell — same)
+docker compose --profile trtllm up -d trtllm
+
+# Phase 4 — parity eval (80 real RAG prompts from football_val.json)
+python models/eval_providers.py --ref huggingface --cand trtllm --max 80
+```
+
+Ship only if parity holds (see eval summary); rollback is one line:
+`rag.llm_provider: trtllm → onnx` in `models/llm_config.yaml`.
+
+| Item | Value |
+|---|---|
+| Engine artifact | `models/export/trtllm/` (gitignored; DVC optional) |
+| Pinned image | `nvcr.io/nvidia/tensorrt-llm/release:1.0.0` |
+| Sidecar endpoint | `http://localhost:8355/v1` |
+| Provider registry key | `trtllm` → `TrtLLMProvider` |
+
 ### Stage 6 — Run the Web Application
 
 ```powershell
@@ -284,6 +339,8 @@ docker compose up --build
 | `fastapi` | football-api | **8001** | REST + GraphQL app (this repo) |
 | `postgres` | football-postgres | 5432 | Relational DB + default KG provider (volume `pgdata`) |
 | `neo4j` | football-neo4j | 7474 / 7687 | Alternative KG graph provider (volume `neo4jdata`; populate via `python rag/build_neo4j_kg.py`, switch with `rag.kg_provider: neo4j`) |
+| `mlflow` | football-mlflow | 5000 | Experiment tracking for GNN train/tune (volume `mlflow_store`) |
+| `trtllm` | football-trtllm | 8355 | *(profile `trtllm`)* TensorRT-LLM sidecar, OpenAI-compatible |
 
 The **vector database is FAISS — embedded, not a container**: it runs inside the
 FastAPI process and reads the index files from `./rag/vector_store`, which compose

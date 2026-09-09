@@ -4,7 +4,8 @@ from typing import Optional, List
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
 from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 from sqlalchemy import String, Integer, Boolean, ForeignKey, Text, DateTime, Date, func
-
+from alembic import command
+from alembic.config import Config
 from api.config import settings
 
 logger = logging.getLogger(__name__)
@@ -224,19 +225,48 @@ class TacticalAnalysis(Base):
     user: Mapped["User"] = relationship(back_populates="tactical_analyses", foreign_keys=[user_id])
     reviewer: Mapped[Optional["User"]] = relationship(foreign_keys=[reviewed_by_id])
 
+async def ensure_kg_database_seeded():
+    """
+    Checks if 'matches' and 'teams' exist and have data.
+    If not, calls rag.build_postgres_db to create and seed them from CSV.
+    Runs automatically on every container startup.
+    """
+    import asyncio
+    from sqlalchemy import text
+    try:
+        async with engine.connect() as conn:
+            result = await conn.execute(text("SELECT to_regclass('public.matches');"))
+            has_matches = result.scalar() is not None
+            if has_matches:
+                count_res = await conn.execute(text("SELECT COUNT(*) FROM matches;"))
+                row_count = count_res.scalar() or 0
+                if row_count > 0:
+                    logger.info("KG database is already populated (%d matches present).", row_count)
+                    return
+
+        logger.info("KG tables missing or empty — seeding from CSV dataset...")
+        from rag.build_postgres_db import main as build_kg_db
+        await asyncio.to_thread(build_kg_db, drop=False)
+        logger.info("KG database seed completed successfully.")
+    except Exception as e:
+        logger.error("Error during KG database seeding check: %s", e)
+
+
 async def init_db():
     """
-    Bring the database schema to the Alembic head.
+    Bring the database schema to the Alembic head and ensure KG tables
+    (matches, teams) are seeded from the processed CSV if missing.
     Alembic is the single source of truth for the ORM tables
     (users, conversations, messages, feedbacks, match_submissions,
     tactical_analyses, prediction_overrides). Non-ORM tables
-    (matches, teams) are excluded via include_object in alembic/env.py.
+    (matches, teams) are populated from data/processed/processed_matches.csv
+    if not already present.
     """
     logger.info("Running Alembic migrations (upgrade head)...")
-    from alembic import command
-    from alembic.config import Config
-
     cfg = Config("alembic.ini")
     cfg.set_main_option("sqlalchemy.url", settings.postgres_dsn)
     command.upgrade(cfg, "head")
     logger.info("Database schema is up to date (Alembic head).")
+
+    # Auto-seed KG tables (matches, teams) if not yet populated
+    await ensure_kg_database_seeded()

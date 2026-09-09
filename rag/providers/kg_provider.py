@@ -186,9 +186,14 @@ class PostgreSQLProvider(BaseKGProvider):
 
     def _query(self, sql: str, params: tuple = ()) -> list[dict]:
         cur = self._conn.cursor()
-        cur.execute(sql, params)
-        cols = [d[0] for d in cur.description]
-        return [dict(zip(cols, row)) for row in cur.fetchall()]
+        try:
+            cur.execute(sql, params)
+            cols = [d[0] for d in cur.description]
+            return [dict(zip(cols, row)) for row in cur.fetchall()]
+        except Exception:
+            # Roll back the aborted transaction so the connection stays usable
+            self._conn.rollback()
+            raise
 
     # ── Queries ────────────────────────────────────────────────────────────
     def get_team_profile(self, team_name: str) -> dict:

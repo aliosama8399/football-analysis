@@ -104,20 +104,29 @@ def evaluate(y_true, y_pred, y_prob, class_names):
 
 def train_one_model(model_name, graph_data):
     """Train a single GNN model using transductive edge classification.
-    
+
     Dispatches on model_name:
       - 'Hybrid'  : forward(x, ei, ea, tabular_features=tabular)
       - 'TEA-GNN' : forward(x, ei, ea, edge_time=edge_time, league_id=league_id)
       - others    : forward(x, ei, ea)
     """
-    
+
+    # ── MLflow run-per-model ───────────────────────────────────────────────
+    try:
+        from models.mlflow_config import setup_mlflow, log_graph_meta, safe_end_run
+        safe_end_run()
+        mlflow = setup_mlflow("football-gnn-training")
+    except Exception as e:
+        mlflow = None
+        print(f"  [mlflow] tracking disabled ({e})")
+
     print(f"\n{'─' * 50}")
     print(f"  Training: {model_name}")
     print(f"{'─' * 50}")
-    
+
     num_nf = graph_data['num_node_features']
     num_ef = graph_data['num_edge_features']
-    
+
     is_hybrid = (model_name == 'Hybrid')
     is_tea_gnn = (model_name == 'TEA-GNN')
     extra_kwargs = {}
@@ -125,10 +134,25 @@ def train_one_model(model_name, graph_data):
         extra_kwargs['num_tabular_features'] = graph_data['num_tabular_features']
     if is_tea_gnn:
         extra_kwargs['num_leagues'] = graph_data.get('num_leagues', 5)
-    
+
     model = get_model(model_name, num_nf, num_ef,
                       hidden_dim=HIDDEN_DIM, num_classes=3, dropout=DROPOUT, **extra_kwargs)
     model = model.to(DEVICE)
+
+    if mlflow:
+        mlflow.start_run(run_name=model_name)
+        log_graph_meta(graph_data)
+        params = {
+            "model": model_name, "hidden_dim": HIDDEN_DIM, "dropout": DROPOUT,
+            "lr": LR, "weight_decay": WEIGHT_DECAY, "epochs_max": EPOCHS,
+            "patience": PATIENCE, "device": str(DEVICE),
+            "is_hybrid": is_hybrid, "is_tea_gnn": is_tea_gnn,
+        }
+        if is_tea_gnn:
+            params["heads"] = getattr(model.conv1, "heads", None)
+            params["num_leagues"] = graph_data.get("num_leagues", 5)
+        mlflow.log_params(params)
+
     
     # Move data to device
     x = graph_data['x'].to(DEVICE)
@@ -178,29 +202,33 @@ def train_one_model(model_name, graph_data):
         model.train()
         optimizer.zero_grad()
         out = _forward(model)  # Predictions for ALL edges
-        
+
         # Loss only on TRAIN edges
         loss = criterion(out[train_mask], ey[train_mask])
         loss.backward()
         torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         optimizer.step()
         train_losses.append(loss.item())
-        
+
         # ── Eval on test edges ──
         model.eval()
         with torch.no_grad():
             val_out = _forward(model)
             val_loss = criterion(val_out[test_mask], ey[test_mask])
-        
+
         scheduler.step(val_loss)
-        
+
         if val_loss.item() < best_val_loss:
             best_val_loss = val_loss.item()
             best_state = {k: v.cpu().clone() for k, v in model.state_dict().items()}
             patience_counter = 0
         else:
             patience_counter += 1
-        
+
+        if mlflow:
+            mlflow.log_metric("train_loss", loss.item(), step=epoch)
+            mlflow.log_metric("val_loss", val_loss.item(), step=epoch)
+
         if patience_counter >= PATIENCE:
             print(f"  Early stop at epoch {epoch}")
             break
@@ -259,7 +287,27 @@ def train_one_model(model_name, graph_data):
     if is_tea_gnn:
         save_payload['num_leagues'] = graph_data.get('num_leagues', 5)
     torch.save(save_payload, model_path)
-    
+
+    # ── MLflow final metrics + checkpoint artifact ─────────────────────────
+    if mlflow:
+        mlflow.log_param("epochs_run", epoch)
+        mlflow.log_param("train_time_s", round(train_time, 2))
+        metric_keys = ["accuracy", "f1_macro", "f1_weighted", "log_loss", "rps", "auc_macro"]
+        mlflow.log_metrics({k: float(metrics[k]) for k in metric_keys if metrics.get(k) is not None})
+        try:
+            mlflow.log_artifact(str(model_path))
+            # Register a new model version under football-gnn-<model> so the
+            # Model Registry page shows versioning across training runs.
+            run = mlflow.active_run()
+            if run:
+                run_id = run.info.run_id
+                reg_name = f"football-gnn-{model_name.lower().replace(' ', '-')}"
+                mlflow.register_model(f"runs:/{run_id}/{model_path.name}", reg_name)
+        except Exception as e:
+            print(f"  [mlflow] artifact/register note: {e}")
+        finally:
+            mlflow.end_run()
+
     return metrics
 
 
@@ -476,6 +524,28 @@ def main():
         print(f"     AUC macro: {best['auc_macro']:.4f}")
     print(f"     Draw F1:   {best['f1_D']:.4f}")
     print(f"{'=' * 70}\n")
+
+    # ── MLflow zoo summary run ──
+    try:
+        from models.mlflow_config import setup_mlflow, safe_end_run
+        safe_end_run()
+        mlflow = setup_mlflow("football-gnn-training")
+        with mlflow.start_run(run_name="Zoo-Summary"):
+            mlflow.set_tag("pipeline", "gnn-zoo-summary")
+            mlflow.log_param("best_model", str(best['model']))
+            mlflow.log_metrics({
+                "best_accuracy": float(best['accuracy']),
+                "best_f1_macro": float(best['f1_macro']),
+                "best_rps": float(best['rps']),
+            })
+            for p in (RESULTS_DIR / 'gnn_comparison.png',
+                      RESULTS_DIR / 'gnn_per_class_f1.png',
+                      RESULTS_DIR / 'gnn_master_summary.txt'):
+                if p.exists():
+                    mlflow.log_artifact(str(p))
+            print("  [mlflow] Zoo summary run logged to 'football-gnn-training'")
+    except Exception as e:
+        print(f"  [mlflow] summary logging note: {e}")
     
     print("✓ GNN pipeline complete!")
     return df, all_results
