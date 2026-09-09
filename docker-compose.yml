@@ -27,7 +27,7 @@ services:
       args:
         GPU: "1"
     container_name: football-api
-    gpus: all                          # requires nvidia-container-toolkit
+    gpus: all # requires nvidia-container-toolkit
     ports:
       - "8001:8001"
     environment:
@@ -38,6 +38,8 @@ services:
       # CUDA artifact built with `-e cuda` (README Stage 5b)
       FOOTBALL_ONNX_MODEL_PATH: /app/models/export/slm_gpu
       HF_HUB_OFFLINE: "0"
+      # Inside the compose network, vllm is reached by SERVICE NAME (not localhost)
+      VLLM_API_URL: http://vllm:8000/v1
     volumes:
       # ONNX artifacts are gitignored & dockerignored → mount from host.
       - ./models/export:/app/models/export:ro
@@ -63,7 +65,7 @@ services:
     volumes:
       - pgdata:/var/lib/postgresql/data
     healthcheck:
-      test: ["CMD-SHELL", "pg_isready -U postgres -d football_rag"]
+      test: [ "CMD-SHELL", "pg_isready -U postgres -d football_rag" ]
       interval: 5s
       timeout: 3s
       retries: 20
@@ -75,15 +77,68 @@ services:
     image: neo4j:5-community
     container_name: football-neo4j
     environment:
-      NEO4J_AUTH: neo4j/password          # matches llm_config.yaml defaults
+      NEO4J_AUTH: neo4j/password # matches llm_config.yaml defaults
       NEO4J_PLUGINS: '["apoc"]'
       NEO4J_dbms_memory_heap_max__size: 512M
     ports:
-      - "7474:7474"   # HTTP browser console
-      - "7687:7687"   # Bolt
+      - "7474:7474" # HTTP browser console
+      - "7687:7687" # Bolt
     volumes:
       - neo4jdata:/data
+
+  # ── 4. MLFLOW experiment tracking server ──────────────────────────────────
+  # Web UI at http://localhost:5000. Logs experiments, runs, and model registry.
+  mlflow:
+    image: ghcr.io/mlflow/mlflow:v3.16.0
+    container_name: football-mlflow
+    command: >
+      mlflow server --host 0.0.0.0 --port 5000 --backend-store-uri sqlite:////mlflow_store/mlflow.db --artifacts-destination /mlflow_store/artifacts
+    ports:
+      - "5000:5000"
+    volumes:
+      - mlflow_store:/mlflow_store
+    restart: unless-stopped
+
+  # ── TENSORRT-LLM sidecar (OpenAI-compatible) ───────────────────────────
+  # Pinned image (reproducibility ≠ :latest — build the engine against this
+  # exact version). Start ONLY when needed:
+  #     docker compose --profile trtllm up -d trtllm
+  vllm:
+    image: vllm/vllm-openai:latest
+    profiles: [ "vllm" ]
+    container_name: football-vllm
+    gpus: all
+    shm_size: 8g
+    ports:
+      - "8356:8000" # OpenAI API on host port 8356
+    environment:
+      HF_HOME: /hf
+      HF_TOKEN: ${HF_TOKEN:-}
+      VLLM_LOGGING_LEVEL: INFO
+      VLLM_ATTENTION_BACKEND: XFORMERS
+      VLLM_WSL2_ENABLE_PIN_MEMORY: "1"
+    command:
+      - --model
+      - aliosama8399/football-analysisN
+      - --enforce-eager
+      - --host
+      - 0.0.0.0
+      - --port
+      - "8000"
+      - --max-model-len
+      - "4096"
+      - --gpu-memory-utilization
+      - "0.80"
+      - --dtype
+      - half
+
+    volumes:
+      # Model weights cached here so restarts do NOT re-download (~1.2 GB once)
+      - hf_cache:/hf
+    restart: unless-stopped
 
 volumes:
   pgdata:
   neo4jdata:
+  mlflow_store:
+  hf_cache:

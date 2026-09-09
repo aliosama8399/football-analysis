@@ -21,9 +21,12 @@ Adding a new provider:
 
 import os
 import json
+import logging
 import yaml
 from abc import ABC, abstractmethod
 from pathlib import Path
+
+logger = logging.getLogger(__name__)
 
 # ── Secrets: load .env (git-ignored) so os.getenv sees LLM API keys ───────────
 
@@ -258,6 +261,117 @@ class OpenAIProvider(BaseLLMProvider):
         return response.choices[0].message.content
 
 
+class TrtLLMProvider(BaseLLMProvider):
+    """Local TensorRT-LLM server (OpenAI-compatible) hosting the finetuned Qwen.
+
+    Config (models/llm_config.yaml -> providers.trtllm):
+      api_url:   http://localhost:8355/v1   (docker service) or override
+      model_name: whatever trtllm-serve exposes (e.g. the engine alias)
+      timeout:   120
+    Requires NO api key (local inference) — same zero-cost call shape as
+    OpenAI-compatible servers (LM Studio etc.).
+    """
+
+    provider_name = "trtllm"
+
+    def __init__(self, model_name: str = "", api_url: str = "", **kwargs):
+        cfg = _provider_cfg("trtllm")
+        self.model_name  = (model_name or cfg.get("model_name", "")).strip() or \
+            cfg.get("default_model", "football-analysisN-trtllm")
+        self.api_url     = (
+            os.environ.get("TRTLLM_API_URL")
+            or api_url
+            or cfg.get("api_url", "")
+        ).strip().rstrip("/") or "http://localhost:8355/v1"
+        self.timeout     = cfg.get("timeout", 120)
+        self.temperature = _gen_cfg().get("temperature", 0.7)
+        self.max_tokens  = _gen_cfg().get("max_tokens", 2048)
+        if not self.api_url.endswith("/v1"):
+            # trtllm-serve exposes /v1; allow plain host:port too
+            self.api_url += "/v1"
+        from openai import OpenAI
+        self._client = OpenAI(base_url=self.api_url, api_key="not-needed")
+
+    def _call_api(self, prompt: str) -> str:
+        response = self._client.chat.completions.create(
+            model=self.model_name,
+            messages=[{"role": "system", "content": "You are a football tactical analyst serving a local Qwen engine."},
+                      {"role": "user",   "content": prompt}],
+            temperature=self.temperature,
+            max_tokens=self.max_tokens,
+            timeout=self.timeout,
+        )
+        return response.choices[0].message.content
+
+
+class VllmProvider(BaseLLMProvider):
+    """vLLM sidecar serving the finetuned HF model directly (no export).
+
+    OpenAI-compatible endpoint from `vllm serve`. Runs via the compose
+    sidecar: `docker compose --profile vllm up -d vllm` (Linux/WSL only).
+
+    Config (models/llm_config.yaml -> providers.vllm):
+      api_url:    http://localhost:8356/v1   (host) — VLLM_API_URL env wins
+      model_name: served model id (must match the name vllm registers)
+      timeout:    300
+    """
+
+    provider_name = "vllm"
+
+    def __init__(self, model_name: str = "", api_url: str = "", **kwargs):
+        cfg = _provider_cfg("vllm")
+        self.model_name  = (model_name or cfg.get("model_name", "")).strip() or \
+            cfg.get("default_model", "aliosama8399/football-analysisN")
+        self.api_url     = (
+            os.environ.get("VLLM_API_URL")
+            or api_url
+            or cfg.get("api_url", "")
+        ).strip().rstrip("/") or "http://localhost:8356/v1"
+        self.timeout     = cfg.get("timeout", 300)
+        self.temperature = _gen_cfg().get("temperature", 0.7)
+        self.max_tokens  = _gen_cfg().get("max_tokens", 2048)
+        if not self.api_url.endswith("/v1"):
+            self.api_url += "/v1"
+        from openai import OpenAI
+        self._client = OpenAI(base_url=self.api_url, api_key="not-needed")
+
+    def generate(self, prompt: str) -> str:
+        return self._call_api(prompt)
+
+    def generate_with_context(self, prompt: str, kg_context: str = "", vector_context: str = "") -> str:
+        # Context budgets: keep the RAG prompt within vLLM's --max-model-len
+        # (4096) + max_tokens, otherwise vllm replies 400 and the RAG falls back
+        # to dumping raw context. Same knobs as the ONNX path.
+        kg_budget = int(os.getenv("FOOTBALL_ONNX_KG_CTX", 0)) or 2000
+        vec_budget = int(os.getenv("FOOTBALL_ONNX_VEC_CTX", 0)) or 1200
+        if kg_budget and len(kg_context) > kg_budget:
+            kg_context = kg_context[:kg_budget].rsplit(" ", 1)[0] + " ..."
+        if vec_budget and len(vector_context) > vec_budget:
+            vector_context = vector_context[:vec_budget].rsplit(" ", 1)[0] + " ..."
+
+        rag_prompt = ""
+        if kg_context:
+            rag_prompt += f"## Retrieved Knowledge Graph Context\n{kg_context}\n\n"
+        if vector_context:
+            rag_prompt += f"## Retrieved Historical Analyses\n{vector_context}\n\n"
+        rag_prompt += f"## User Question\n{prompt}"
+        return self._call_api(rag_prompt)
+
+    def _call_api(self, prompt: str) -> str:
+        logger.info("[LLM:VLLM] -> %s model=%s timeout=%d", self.api_url, self.model_name, self.timeout)
+        response = self._client.chat.completions.create(
+            model=self.model_name,
+            messages=[{"role": "system", "content": "You are a football tactical analyst."},
+                      {"role": "user",   "content": prompt}],
+            temperature=self.temperature,
+            max_tokens=self.max_tokens,
+            timeout=self.timeout,
+        )
+        out = response.choices[0].message.content
+        logger.info("[LLM:VLLM] done -> %d chars", len(out or ""))
+        return out
+
+
 class GeminiProvider(BaseLLMProvider):
     """Google Gemini models (gemini-2.0-flash, gemini-1.5-pro, ...)."""
 
@@ -368,8 +482,10 @@ LLM_REGISTRY: dict[str, type] = {
     "openai":       OpenAIProvider,
     "gemini":       GeminiProvider,
     "anthropic":    AnthropicProvider,
-    "onnx":         _OnnxProvider,   # ONNX export of Qwen3-0.6B (models/export/slm) — replaces huggingface
-    "huggingface":  _OnnxProvider,   # alias: any huggingface request now serves ONNX (per user request)
+    # Local GPU inference paths (no API key needed):
+    "onnx":         _OnnxProvider,   # ONNX export of Qwen3-0.6B (models/export/slm)
+    "trtllm":       TrtLLMProvider,  # TensorRT-LLM server sidecar (tensorrt phase)
+    "vllm":         VllmProvider,    # vLLM sidecar: serves HF model natively (compose profile vllm)
 }
 
 
