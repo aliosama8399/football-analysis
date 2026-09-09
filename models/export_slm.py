@@ -100,7 +100,7 @@ def main() -> None:
     out = Path(args.out)
     out.mkdir(parents=True, exist_ok=True)
 
-    # Token mirrors hf_provider.py: config hf_token -> env HUGGINGFACE_HUB_TOKEN
+    # Token mirrors models/llm_providers/hf.py: config hf_token -> env HUGGINGFACE_HUB_TOKEN
     hf_token = os.getenv("HUGGINGFACE_HUB_TOKEN", "").strip() or None
 
     print(f"[export_slm] model_id={args.model_id}")

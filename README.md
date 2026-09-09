@@ -27,7 +27,7 @@ football/
 ├── models/
 │   ├── LlamaFactory/       ← Fine-tuning framework
 │   ├── gnn_models.py       ← EdgeConv GNN implementation
-│   ├── hf_provider.py      ← GPU/CPU execution manager for fine-tuned LLMs
+│   ├── llm_providers/      ← Modular LLM/SLM provider suite (Ollama, ONNX, HF, cloud)
 │   ├── train_gnn.py        ← GNN training script
 │   └── train_traditional.py← Ensemble classifier trainer
 └── rag/                    ← Retrieval-Augmented Generation System
@@ -255,7 +255,7 @@ Expert 2 (fine-tuned Qwen SLM) via `onnxruntime` / `onnxruntime-genai`.
 conda activate football
 
 # ── Expert 2: fine-tuned SLM → onnxruntime-genai CUDA artifact (REAL-TIME) ──
-# ~65 tok/s on GPU; auto-detected by models/onnx_llm_provider.py (genai_config.json)
+# ~65 tok/s on GPU; auto-detected by models/llm_providers/onnx.py (genai_config.json)
 python -m onnxruntime_genai.models.builder ^
     -m aliosama8399/football-analysisN ^
     -o models/export/slm_gpu -p fp16 -e cuda -c ./models/export/genai_cache
@@ -271,7 +271,7 @@ Resulting artifacts (all gitignored):
 
 | Path | Backend | Size | Used by |
 |---|---|---|---|
-| `models/export/slm_gpu/` | `onnxruntime-genai` **CUDA** (KV-cache in C++) | ~1.2 GB | `models/onnx_llm_provider.py` — auto-selected when `genai_config.json` present |
+| `models/export/slm_gpu/` | `onnxruntime-genai` **CUDA** (KV-cache in C++) | ~1.2 GB | `models/llm_providers/onnx.py` — auto-selected when `genai_config.json` present |
 | `models/export/slm/` *(optional)* | optimum `ORTModelForCausalLM` CPU | ~1.3 GB | same provider, fallback |
 | `models/export/gnn/tea_gnn.onnx` (+ `_io.json`) | `onnxruntime` CPU | ~0.33 MB | `rag/providers/gnn_provider_onnx.py` |
 
